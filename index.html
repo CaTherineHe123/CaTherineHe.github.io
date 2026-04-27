@@ -28,18 +28,14 @@
             scroll-behavior: smooth;
         }
 
-        body { 
-            background-color: var(--bg); 
-            color: var(--text-main); 
-            line-height: 1.6; 
-        }
+        body { background-color: var(--bg); color: var(--text-main); line-height: 1.6; }
 
         header {
             padding: 1rem 10%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: rgba(255, 255, 255, 0.98);
+            background: white;
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -49,22 +45,8 @@
         .logo { font-weight: 800; font-size: 1.2rem; color: var(--primary); text-decoration: none; }
         .logo span { color: var(--accent); }
 
-        nav { display: flex; align-items: center; }
-        nav a { 
-            text-decoration: none; 
-            color: var(--text-muted); 
-            margin-left: 25px; 
-            font-weight: 600; 
-            font-size: 0.9rem; 
-        }
-
-        .btn-cv { 
-            background: var(--primary); 
-            color: white !important; 
-            padding: 8px 18px; 
-            border-radius: 4px; 
-            transition: 0.3s;
-        }
+        nav a { text-decoration: none; color: var(--text-muted); margin-left: 25px; font-weight: 600; font-size: 0.9rem; }
+        .btn-cv { background: var(--primary); color: white !important; padding: 8px 18px; border-radius: 4px; transition: 0.3s; }
         .btn-cv:hover { background: var(--accent); }
 
         .hero { 
@@ -75,14 +57,21 @@
             gap: 50px;
         }
 
-        .profile-img {
+        .profile-img-container {
             width: 250px;
             height: 250px;
+            flex-shrink: 0;
+        }
+
+        .profile-img {
+            width: 100%;
+            height: 100%;
             border-radius: 50%;
             object-fit: cover;
             border: 4px solid var(--accent);
             box-shadow: 0 10px 25px rgba(0,0,0,0.1);
             animation: fadeInUp 0.8s ease-out;
+            display: block;
         }
 
         .hero-text { flex: 1; }
@@ -90,22 +79,13 @@
         .hero p { font-size: 1.1rem; color: var(--text-muted); max-width: 600px; margin-bottom: 1.5rem; }
         
         .contact-info { font-weight: 500; font-size: 0.95rem; }
-        .contact-info p { margin-bottom: 5px; }
-        .contact-info i { color: var(--accent); margin-right: 10px; width: 20px; }
+        .contact-info p { margin-bottom: 5px; display: flex; align-items: center; }
+        .contact-info i { color: var(--accent); margin-right: 12px; width: 16px; text-align: center; }
 
         .container { padding: 80px 10%; }
-        .section-label { 
-            color: var(--accent); 
-            font-weight: 800; 
-            letter-spacing: 2px; 
-            font-size: 0.8rem; 
-            text-transform: uppercase; 
-            margin-bottom: 25px; 
-            display: block; 
-        }
+        .section-label { color: var(--accent); font-weight: 800; letter-spacing: 2px; font-size: 0.8rem; text-transform: uppercase; margin-bottom: 25px; display: block; }
         
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        
         .card { 
             background: var(--card-bg); 
             padding: 35px; 
@@ -114,46 +94,18 @@
             transition: 0.3s;
             animation: fadeInUp 0.6s ease-out forwards;
         }
-        .card:hover { 
-            border-color: var(--accent); 
-            transform: translateY(-5px); 
-            background: white; 
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05); 
-        }
-        
+        .card:hover { border-color: var(--accent); transform: translateY(-5px); background: white; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
         .card h3 { margin-bottom: 10px; }
         .card .subtitle { color: var(--accent); font-weight: 700; margin-bottom: 5px; }
         .card .date { font-size: 0.85rem; color: var(--text-muted); font-style: italic; margin-bottom: 15px; display: block; }
 
-        .skill-tag { 
-            display: inline-block;
-            background: white; 
-            padding: 6px 14px; 
-            border-radius: 4px; 
-            font-size: 0.85rem; 
-            font-weight: 600; 
-            color: var(--primary); 
-            border: 1px solid #e2e8f0;
-            margin: 5px 5px 0 0;
-        }
+        .skill-tag { display: inline-block; background: white; padding: 6px 14px; border-radius: 4px; font-size: 0.85rem; font-weight: 600; color: var(--primary); border: 1px solid #e2e8f0; margin: 5px 5px 0 0; }
 
-        footer { 
-            padding: 40px 10%; 
-            background: var(--primary); 
-            color: white; 
-            text-align: center; 
-            font-size: 0.9rem;
-        }
+        footer { padding: 40px 10%; background: var(--primary); color: white; text-align: center; font-size: 0.9rem; }
 
         @media (max-width: 992px) {
             .hero { flex-direction: column; text-align: center; padding-top: 50px; }
             .hero-text { display: flex; flex-direction: column; align-items: center; }
-        }
-
-        @media (max-width: 768px) { 
-            .hero h1 { font-size: 2.5rem; }
-            nav a:not(.btn-cv) { display: none; } 
-            .profile-img { width: 180px; height: 180px; }
         }
     </style>
 </head>
@@ -169,11 +121,12 @@
     </header>
 
     <section class="hero">
-        <img src="Assets/ProfilePic.png" alt="Catherine He" class="profile-img">
+        <div class="profile-img-container">
+            <img src="Assets/ProfilePic.png" alt="Catherine He" class="profile-img">
+        </div>
         <div class="hero-text">
-            <h1>Catherine He</h1>
-            <p>Accounting student at Rutgers University[cite: 5, 6]. Dedicated to precision in financial reporting, auditing, and academic excellence[cite: 9, 23].</p>
-            
+            <h1>Catherine He [cite: 1]</h1>
+            <p>Accounting student at Rutgers University[cite: 5, 6]. Dedicated to precision in financial reporting, auditing, and academic excellence[cite: 23, 28].</p>
             <div class="contact-info">
                 <p><i class="fas fa-envelope"></i> ca.he0919@gmail.com [cite: 3]</p>
                 <p><i class="fas fa-phone"></i> (732) 532-9681 [cite: 3]</p>
@@ -183,64 +136,64 @@
     </section>
 
     <section class="container" id="education">
-        <span class="section-label">Education</span>
+        <span class="section-label">Education [cite: 4]</span>
         <div class="card" style="width: 100%;">
             <h3>Rutgers, The State University of New Jersey [cite: 5]</h3>
-            <p class="subtitle">Bachelor of Science in Accounting | GPA: 3.63/4.00 [cite: 6, 9]</p>
+            <p class="subtitle">Bachelor of Science in Accounting [cite: 6] | GPA: 3.63/4.00 [cite: 9]</p>
             <p>Dean's List: Fall 2023, Spring 2024, Spring 2025, Fall 2026 [cite: 7]</p>
             <span class="date">Expected Graduation: Dec 2026 [cite: 8]</span>
             <p style="margin-top:15px; font-size: 0.95rem;">
-                <strong>Relevant Coursework:</strong> Intermediate Accounting, Income Tax Accounting, Concepts of Auditing, Managerial Accounting[cite: 10].
+                <strong>Relevant Coursework:</strong> Intermediate Accounting, Income tax Accounting, Concepts of Auditing, Managerial Accounting[cite: 10].
             </p>
         </div>
     </section>
 
     <section class="container" id="experience" style="background-color: #fafbfc;">
-        <span class="section-label">Professional Experience</span>
+        <span class="section-label">Professional Experience [cite: 11]</span>
         <div class="grid">
             <div class="card">
                 <h3>Course Grader [cite: 13]</h3>
                 <p class="subtitle">Rutgers MSIS Department [cite: 12]</p>
                 <span class="date">Jan 2026 – Present [cite: 15]</span>
-                <p style="font-size: 0.9rem;">Evaluating assignments and exams for 43+ students while ensuring strict consistency with instructor grading standards and maintaining record confidentiality[cite: 16, 18].</p>
+                <p style="font-size: 0.9rem;">Grading assignments for ~43 students while ensuring consistency with instructor standards and maintaining academic record integrity[cite: 16, 18].</p>
             </div>
             <div class="card">
                 <h3>Course Grader [cite: 20]</h3>
                 <p class="subtitle">Rutgers Department of Mathematics [cite: 19]</p>
                 <span class="date">May 2025 – Dec 2025 [cite: 22]</span>
-                <p style="font-size: 0.9rem;">Independently evaluated coursework for 40 students across two sections, ensuring precision, fairness, and adherence to tight grading deadlines[cite: 23].</p>
+                <p style="font-size: 0.9rem;">Independently evaluated coursework for ~40 students, demonstrating strong time management and adherence to guidelines[cite: 23].</p>
             </div>
             <div class="card">
-                <h3>Mentoring Program [cite: 25]</h3>
-                <p class="subtitle">TeamUP - Rutgers Business School [cite: 25]</p>
+                <h3>Selected Participant [cite: 25]</h3>
+                <p class="subtitle">TeamUP Mentoring Program [cite: 25]</p>
                 <span class="date">Aug 2024 – Jan 2025 [cite: 26]</span>
-                <p style="font-size: 0.9rem;">Paired with a professional mentor from an accounting firm to discuss career paths in audit and tax, industry expectations, and professional ethics[cite: 27, 28].</p>
+                <p style="font-size: 0.9rem;">Engaged in semester-long career development with a professional mentor from an accounting firm[cite: 27].</p>
             </div>
         </div>
     </section>
 
     <section class="container" id="skills">
-        <span class="section-label">Technical Skills & Projects</span>
+        <span class="section-label">Skills & Projects [cite: 30]</span>
         <div class="grid">
             <div class="card">
-                <h3>Computer Skills [cite: 30, 31]</h3>
-                <div class="skills-container">
-                    <span class="skill-tag">Microsoft Excel [cite: 32]</span>
+                <h3>Computer Skills [cite: 31]</h3>
+                <div style="margin-top: 10px;">
                     <span class="skill-tag">Microsoft Word [cite: 32]</span>
                     <span class="skill-tag">PowerPoint [cite: 32]</span>
+                    <span class="skill-tag">Excel [cite: 32]</span>
                     <span class="skill-tag">HTML [cite: 32]</span>
                     <span class="skill-tag">JavaScript [cite: 32]</span>
                 </div>
             </div>
             <div class="card">
-                <h3>Website Development [cite: 32]</h3>
-                <p style="font-size: 0.9rem;">Created this professional portfolio website from scratch using HTML and JavaScript to showcase academic and professional milestones[cite: 32].</p>
+                <h3>Website Project [cite: 30]</h3>
+                <p style="font-size: 0.9rem;">Developed a professional personal website using HTML and JavaScript to showcase academic achievements[cite: 32].</p>
             </div>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 Catherine He | Rutgers Business School Accounting</p>
+        <p>&copy; 2026 Catherine He | Rutgers Business School [cite: 1, 25]</p>
     </footer>
 
 </body>
