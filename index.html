@@ -3,113 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catherine He | Accounting Professional</title>
+    <title>Catherine He | Rutgers Accounting</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
-            --primary: #1e293b;    /* Slate Blue-Grey (Professional) */
-            --accent: #b91c1c;     /* Rutgers Scarlet (A nod to your university) */
-            --accent-soft: #fef2f2; 
+            --primary: #1e293b;    
+            --accent: #cc0033;     /* Rutgers Scarlet */
             --bg: #ffffff;
             --text-main: #0f172a;
             --text-muted: #475569;
             --card-bg: #f8fafc;
         }
 
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Inter', -apple-system, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             scroll-behavior: smooth;
         }
 
-        body {
-            background-color: var(--bg);
-            color: var(--text-main);
-            line-height: 1.6;
-        }
+        body { background-color: var(--bg); color: var(--text-main); line-height: 1.6; }
 
         header {
-            padding: 1.2rem 10%;
+            padding: 1rem 10%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: rgba(255, 255, 255, 0.98);
+            background: white;
             position: sticky;
             top: 0;
             z-index: 1000;
             border-bottom: 1px solid #e2e8f0;
         }
 
-        .logo { font-weight: 800; font-size: 1.1rem; letter-spacing: 1px; }
+        .logo { font-weight: 800; font-size: 1.2rem; color: var(--primary); text-decoration: none; }
         .logo span { color: var(--accent); }
 
-        nav a {
-            text-decoration: none;
-            color: var(--text-muted);
-            margin-left: 25px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            transition: 0.3s;
-        }
+        nav a { text-decoration: none; color: var(--text-muted); margin-left: 25px; font-weight: 600; font-size: 0.9rem; }
+        .btn-cv { background: var(--primary); color: white !important; padding: 8px 16px; border-radius: 4px; }
 
-        nav a:hover { color: var(--accent); }
+        .hero { padding: 100px 10%; background: linear-gradient(135deg, #fff 0%, #f1f5f9 100%); }
+        .hero h1 { font-size: 3.5rem; color: var(--primary); margin-bottom: 1rem; }
+        .hero p { font-size: 1.2rem; color: var(--text-muted); max-width: 700px; margin-bottom: 2rem; }
 
-        .btn-cv {
-            background: var(--primary);
-            color: white !important;
-            padding: 8px 16px;
-            border-radius: 4px;
-        }
-
-        /* Hero Section */
-        .hero {
-            padding: 100px 10%;
-            background: linear-gradient(to right, #ffffff, #f1f5f9);
-        }
-
-        .status-badge {
-            display: inline-flex;
-            align-items: center;
-            background: var(--accent-soft);
-            color: var(--accent);
-            padding: 6px 14px;
-            border-radius: 4px;
-            font-size: 0.75rem;
-            font-weight: 700;
-            margin-bottom: 20px;
-        }
-
-        .hero h1 { font-size: 3.5rem; margin-bottom: 15px; color: var(--primary); }
-        .hero p { font-size: 1.1rem; color: var(--text-muted); max-width: 650px; margin-bottom: 30px; }
-
-        /* Experience & Education Grid */
         .container { padding: 80px 10%; }
-        .section-label { color: var(--accent); font-weight: 800; letter-spacing: 1.5px; font-size: 0.7rem; text-transform: uppercase; margin-bottom: 15px; display: block; }
+        .section-label { color: var(--accent); font-weight: 800; letter-spacing: 1px; font-size: 0.8rem; text-transform: uppercase; margin-bottom: 20px; display: block; }
         
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .card { background: var(--card-bg); padding: 30px; border-radius: 8px; border: 1px solid #e2e8f0; transition: 0.3s; }
+        .card:hover { border-color: var(--accent); transform: translateY(-5px); background: white; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        
+        .skill-tag { display: inline-block; background: #e2e8f0; padding: 5px 12px; border-radius: 4px; margin: 5px 5px 0 0; font-size: 0.85rem; font-weight: 600; color: var(--primary); }
 
-        .card {
-            background: var(--card-bg);
-            padding: 30px;
-            border-radius: 4px;
-            border: 1px solid #e2e8f0;
-            transition: 0.3s;
-            animation: fadeInUp 0.6s ease-out forwards;
-        }
-
-        .card:hover { border-color: var(--accent); transform: translateY(-3px); background: #fff; }
-        .card h3 { font-size: 1.1rem; margin-bottom: 5px; }
-        .card .date { font-size: 0.85rem; color: var(--accent); font-weight: 600; margin-bottom: 15px; display: block; }
-        .card ul { padding-left: 18px; font-size: 0.9rem; color: var(--text-muted); }
-
-        footer { padding: 60px 10%; background: var(--primary); color: white; text-align: center; }
+        footer { padding: 50px 10%; background: var(--primary); color: white; text-align: center; }
 
         @media (max-width: 768px) { .hero h1 { font-size: 2.5rem; } nav a:not(.btn-cv) { display: none; } }
     </style>
@@ -117,7 +64,7 @@
 <body>
 
     <header>
-        <div class="logo">CATHERINE <span>HE</span></div>
+        <a href="#" class="logo">CATHERINE <span>HE</span></a>
         <nav>
             <a href="#education">Education</a>
             <a href="#experience">Experience</a>
@@ -126,65 +73,64 @@
     </header>
 
     <section class="hero">
-        <div class="status-badge">EXPECTED GRADUATION: DEC 2026</div>
-        <h1>Future Accounting Professional.</h1>
-        <p>B.S. in Accounting student at Rutgers University with a 3.63 GPA. Experienced in academic evaluation, financial concepts, and professional ethics.</p>
-        <div style="display: flex; gap: 20px; align-items: center;">
-            <a href="mailto:ca.he0919@gmail.com" style="color: var(--primary); font-weight: 700; text-decoration: none;">ca.he0919@gmail.com</a>
-            <span style="color: #cbd5e1;">|</span>
-            <span style="color: var(--text-muted); font-size: 0.9rem;">(732) 532-9681</span>
+        <h1>Catherine He</h1>
+        <p>B.S. in Accounting Candidate at Rutgers University[cite: 5, 6]. Dedicated to precision in financial reporting and academic excellence[cite: 9, 23].</p>
+        <div style="font-weight: 600;">
+            <i class="fas fa-envelope"></i> ca.he0919@gmail.com [cite: 3] <br>
+            <i class="fas fa-phone"></i> (732) 532-9681 [cite: 3]
         </div>
     </section>
 
     <section class="container" id="education">
         <span class="section-label">Education</span>
         <div class="card" style="width: 100%;">
-            <h3>Rutgers, The State University of New Jersey</h3>
-            <span class="date">Bachelor of Science in Accounting | GPA: 3.63/4.00</span>
-            <p><strong>Honors:</strong> Dean's List (Fall 2023, Spring 2024, Spring 2025, Fall 2026)</p>
-            <p style="margin-top: 10px; font-size: 0.9rem; color: var(--text-muted);">
-                <strong>Relevant Coursework:</strong> Intermediate Accounting, Income Tax Accounting, Concepts of Auditing, Managerial Accounting.
-            </p>
+            <h3>Rutgers, The State University of New Jersey [cite: 5]</h3>
+            <p><strong>Bachelor of Science in Accounting</strong> | GPA: 3.63/4.00 [cite: 6, 9]</p>
+            <p>Dean's List: Fall 2023, Spring 2024, Spring 2025, Fall 2026 [cite: 7]</p>
+            <p style="margin-top:10px; font-size: 0.9rem;"><strong>Relevant Courses:</strong> Intermediate Accounting, Income Tax Accounting, Concepts of Auditing, Managerial Accounting[cite: 10].</p>
         </div>
     </section>
 
-    <section class="container" id="experience" style="background: #fdfdfd;">
+    <section class="container" id="experience">
         <span class="section-label">Professional Experience</span>
         <div class="grid">
             <div class="card">
-                <h3>Course Grader (MSIS Dept)</h3>
-                <span class="date">Jan 2026 – Present</span>
-                <ul>
-                    <li>Grade assignments and exams for 43+ students.</li>
-                    <li>Ensure grading consistency and integrity of academic records.</li>
-                    <li>Provide constructive feedback to support student learning.</li>
-                </ul>
+                <h3>Course Grader [cite: 13]</h3>
+                <p style="color: var(--accent); font-weight: 700;">Rutgers MSIS Department [cite: 12]</p>
+                <p style="font-size: 0.8rem; margin-bottom: 10px;">Jan 2026 – Present [cite: 15]</p>
+                <p style="font-size: 0.9rem;">Grade assignments for ~43 students while maintaining strict integrity and instructor standards[cite: 16, 18].</p>
             </div>
             <div class="card">
-                <h3>Course Grader (Math Dept)</h3>
-                <span class="date">May 2025 – Dec 2025</span>
-                <ul>
-                    <li>Evaluated coursework for two undergraduate sections (~40 students).</li>
-                    <li>Demonstrated strong time management and fairness in grading.</li>
-                </ul>
+                <h3>Course Grader [cite: 20]</h3>
+                <p style="color: var(--accent); font-weight: 700;">Rutgers Mathematics Department [cite: 19]</p>
+                <p style="font-size: 0.8rem; margin-bottom: 10px;">May 2025 – Dec 2025 [cite: 22]</p>
+                <p style="font-size: 0.9rem;">Independently evaluated coursework for 40 students with high precision and time management[cite: 23].</p>
             </div>
         </div>
     </section>
 
-    <section class="container">
-        <span class="section-label">Career Development</span>
-        <div class="card">
-            <h3>TeamUP Mentoring Program</h3>
-            <span class="date">Aug 2024 – Jan 2025</span>
-            <p>Selected for a one-on-one program with a professional from a major accounting firm. Engaged in in-depth discussions on audit, tax, and professional ethics.</p>
+    <section class="container" id="skills">
+        <span class="section-label">Skills & Projects</span>
+        <div class="grid">
+            <div class="card">
+                <h3>Technical Skills</h3>
+                <div style="margin-top: 10px;">
+                    <span class="skill-tag">Microsoft Word [cite: 32]</span>
+                    <span class="skill-tag">PowerPoint [cite: 32]</span>
+                    <span class="skill-tag">Excel [cite: 32]</span>
+                    <span class="skill-tag">HTML [cite: 32]</span>
+                    <span class="skill-tag">JavaScript [cite: 32]</span>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Web Project</h3>
+                <p style="font-size: 0.9rem;">Successfully created a personal website utilizing HTML and JavaScript to showcase professional credentials[cite: 32].</p>
+            </div>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 Catherine He | Highland Park, NJ</p>
-        <div style="margin-top: 15px; font-size: 0.8rem; opacity: 0.6;">
-            Built with HTML & JavaScript
-        </div>
+        <p>&copy; 2026 Catherine He | Highland Park, NJ [cite: 2]</p>
     </footer>
 
 </body>
