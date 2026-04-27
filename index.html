@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name | Professional Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2d3436;
+            --accent: #0984e3;
+            --bg: #f5f6fa;
+            --text: #2d3436;
+            --light: #ffffff;
+        }
+
+        /* 1. Global Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Header Animation */
+        header {
+            background: var(--light);
+            padding: 1rem 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            z-index: 1000;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        /* Hero Animation */
+        .hero {
+            padding: 120px 10%;
+            text-align: center;
+            background: linear-gradient(-45deg, #f5f6fa, #dcdde1, #e1e2e7, #ffffff);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+            animation: fadeInUp 1s ease-out forwards;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #636e72;
+            max-width: 600px;
+            margin: 0 auto 30px;
+            animation: fadeInUp 1.2s ease-out forwards;
+        }
+
+        /* Content Card Animations */
+        .card {
+            background: var(--light);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            opacity: 0; /* Hidden initially for fade-in */
+            animation: fadeInUp 0.8s ease-out forwards;
+            animation-delay: 0.5s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            border-bottom: 4px solid var(--accent);
+        }
+
+        /* Social Icons Hover */
+        .social-links a {
+            color: var(--primary);
+            font-size: 1.8rem;
+            margin: 0 15px;
+            display: inline-block;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--accent);
+            transform: scale(1.2) rotate(5deg);
+        }
+
+        .container { padding: 80px 10%; }
+        .section-title { text-align: center; margin-bottom: 50px; font-size: 2.2rem; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+
+        .footer {
+            text-align: center;
+            padding: 60px;
+            background: var(--primary);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo"><strong>PORTFOLIO</strong>2026</div>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Creative Developer</h1>
+        <p>I build digital experiences that are as functional as they are beautiful. Specialized in modern web tech and user-centric design.</p>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+    </section>
+
+    <div class="container" id="about">
+        <h2 class="section-title">The Bio</h2>
+        <div class="card" style="animation-delay: 0.2s;">
+            <p><strong>[Dummy Bio]</strong>: I am a professional with over X years of experience in the industry. I thrive at the intersection of logic and creativity. Whether I'm debugging complex code or wireframing a new user journey, my goal is always the same: excellence.</p>
+        </div>
+    </div>
+
+    <div class="container" id="experience">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="grid">
+            <div class="card" style="animation-delay: 0.4s;">
+                <h3>Project Alpha</h3>
+                <p>A data-driven application that automates boring tasks. This project showcases my ability to integrate APIs and manage state effectively.</p>
+            </div>
+            <div class="card" style="animation-delay: 0.6s;">
+                <h3>Project Beta</h3>
+                <p>A sleek, minimalist interface designed for high-conversion e-commerce. Focused heavily on performance and load times.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer" id="contact">
+        <p>Ready to start a project?</p>
+        <h2 style="margin: 20px 0;"><a href="mailto:you@example.com" style="color: var(--accent); text-decoration: none;">Let's Talk ¡ú</a></h2>
+        <p>&copy; 2026 Your Name. Built with precision.</p>
+    </footer>
+
+</body>
+</html>
