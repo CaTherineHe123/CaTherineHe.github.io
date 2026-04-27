@@ -70,11 +70,26 @@
         .hero { 
             padding: 100px 10%; 
             background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
+            display: flex;
+            align-items: center;
+            gap: 50px;
         }
+
+        .profile-img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--accent);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .hero-text { flex: 1; }
         .hero h1 { font-size: 3.5rem; color: var(--primary); margin-bottom: 1rem; }
-        .hero p { font-size: 1.2rem; color: var(--text-muted); max-width: 750px; margin-bottom: 2rem; }
+        .hero p { font-size: 1.1rem; color: var(--text-muted); max-width: 600px; margin-bottom: 1.5rem; }
         
-        .contact-info { margin-top: 20px; font-weight: 500; }
+        .contact-info { font-weight: 500; font-size: 0.95rem; }
         .contact-info p { margin-bottom: 5px; }
         .contact-info i { color: var(--accent); margin-right: 10px; width: 20px; }
 
@@ -123,15 +138,22 @@
         }
 
         footer { 
-            padding: 60px 10%; 
+            padding: 40px 10%; 
             background: var(--primary); 
             color: white; 
             text-align: center; 
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 992px) {
+            .hero { flex-direction: column; text-align: center; padding-top: 50px; }
+            .hero-text { display: flex; flex-direction: column; align-items: center; }
         }
 
         @media (max-width: 768px) { 
             .hero h1 { font-size: 2.5rem; }
             nav a:not(.btn-cv) { display: none; } 
+            .profile-img { width: 180px; height: 180px; }
         }
     </style>
 </head>
@@ -147,25 +169,28 @@
     </header>
 
     <section class="hero">
-        <h1>Catherine He</h1>
-        <p>Bachelor of Science in Accounting Candidate at Rutgers University. Dedicated to precision in financial reporting, auditing, and academic excellence.</p>
-        
-        <div class="contact-info">
-            <p><i class="fas fa-envelope"></i> ca.he0919@gmail.com</p>
-            <p><i class="fas fa-phone"></i> (732) 532-9681</p>
-            <p><i class="fas fa-map-marker-alt"></i> Highland Park, NJ</p>
+        <img src="Assets/ProfilePic.png" alt="Catherine He" class="profile-img">
+        <div class="hero-text">
+            <h1>Catherine He</h1>
+            <p>Accounting student at Rutgers University[cite: 5, 6]. Dedicated to precision in financial reporting, auditing, and academic excellence[cite: 9, 23].</p>
+            
+            <div class="contact-info">
+                <p><i class="fas fa-envelope"></i> ca.he0919@gmail.com [cite: 3]</p>
+                <p><i class="fas fa-phone"></i> (732) 532-9681 [cite: 3]</p>
+                <p><i class="fas fa-map-marker-alt"></i> Highland Park, NJ [cite: 2]</p>
+            </div>
         </div>
     </section>
 
     <section class="container" id="education">
         <span class="section-label">Education</span>
         <div class="card" style="width: 100%;">
-            <h3>Rutgers, The State University of New Jersey</h3>
-            <p class="subtitle">Bachelor of Science in Accounting | GPA: 3.63/4.00</p>
-            <p>Dean's List: Fall 2023, Spring 2024, Spring 2025, Fall 2026</p>
-            <span class="date">Expected Graduation: Dec 2026</span>
+            <h3>Rutgers, The State University of New Jersey [cite: 5]</h3>
+            <p class="subtitle">Bachelor of Science in Accounting | GPA: 3.63/4.00 [cite: 6, 9]</p>
+            <p>Dean's List: Fall 2023, Spring 2024, Spring 2025, Fall 2026 [cite: 7]</p>
+            <span class="date">Expected Graduation: Dec 2026 [cite: 8]</span>
             <p style="margin-top:15px; font-size: 0.95rem;">
-                <strong>Relevant Coursework:</strong> Intermediate Accounting, Income Tax Accounting, Concepts of Auditing, Managerial Accounting.
+                <strong>Relevant Coursework:</strong> Intermediate Accounting, Income Tax Accounting, Concepts of Auditing, Managerial Accounting[cite: 10].
             </p>
         </div>
     </section>
@@ -174,22 +199,22 @@
         <span class="section-label">Professional Experience</span>
         <div class="grid">
             <div class="card">
-                <h3>Course Grader</h3>
-                <p class="subtitle">Rutgers MSIS Department</p>
-                <span class="date">Jan 2026 – Present</span>
-                <p style="font-size: 0.9rem;">Evaluating assignments and exams for 43+ students while ensuring strict consistency with instructor grading standards and maintaining record confidentiality.</p>
+                <h3>Course Grader [cite: 13]</h3>
+                <p class="subtitle">Rutgers MSIS Department [cite: 12]</p>
+                <span class="date">Jan 2026 – Present [cite: 15]</span>
+                <p style="font-size: 0.9rem;">Evaluating assignments and exams for 43+ students while ensuring strict consistency with instructor grading standards and maintaining record confidentiality[cite: 16, 18].</p>
             </div>
             <div class="card">
-                <h3>Course Grader</h3>
-                <p class="subtitle">Rutgers Department of Mathematics</p>
-                <span class="date">May 2025 – Dec 2025</span>
-                <p style="font-size: 0.9rem;">Independently evaluated coursework for 40 students across two sections, ensuring precision, fairness, and adherence to tight grading deadlines.</p>
+                <h3>Course Grader [cite: 20]</h3>
+                <p class="subtitle">Rutgers Department of Mathematics [cite: 19]</p>
+                <span class="date">May 2025 – Dec 2025 [cite: 22]</span>
+                <p style="font-size: 0.9rem;">Independently evaluated coursework for 40 students across two sections, ensuring precision, fairness, and adherence to tight grading deadlines[cite: 23].</p>
             </div>
             <div class="card">
-                <h3>Mentoring Program</h3>
-                <p class="subtitle">TeamUP - Rutgers Business School</p>
-                <span class="date">Aug 2024 – Jan 2025</span>
-                <p style="font-size: 0.9rem;">Paired with a professional mentor from an accounting firm to discuss career paths in audit and tax, industry expectations, and professional ethics.</p>
+                <h3>Mentoring Program [cite: 25]</h3>
+                <p class="subtitle">TeamUP - Rutgers Business School [cite: 25]</p>
+                <span class="date">Aug 2024 – Jan 2025 [cite: 26]</span>
+                <p style="font-size: 0.9rem;">Paired with a professional mentor from an accounting firm to discuss career paths in audit and tax, industry expectations, and professional ethics[cite: 27, 28].</p>
             </div>
         </div>
     </section>
@@ -198,19 +223,18 @@
         <span class="section-label">Technical Skills & Projects</span>
         <div class="grid">
             <div class="card">
-                <h3>Computer Skills</h3>
-                <p style="font-size: 0.9rem; margin-bottom: 10px;">Proficient in professional software and basic web technologies:</p>
+                <h3>Computer Skills [cite: 30, 31]</h3>
                 <div class="skills-container">
-                    <span class="skill-tag">Microsoft Excel</span>
-                    <span class="skill-tag">Microsoft Word</span>
-                    <span class="skill-tag">PowerPoint</span>
-                    <span class="skill-tag">HTML</span>
-                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">Microsoft Excel [cite: 32]</span>
+                    <span class="skill-tag">Microsoft Word [cite: 32]</span>
+                    <span class="skill-tag">PowerPoint [cite: 32]</span>
+                    <span class="skill-tag">HTML [cite: 32]</span>
+                    <span class="skill-tag">JavaScript [cite: 32]</span>
                 </div>
             </div>
             <div class="card">
-                <h3>Website Development</h3>
-                <p style="font-size: 0.9rem;">Created this professional portfolio website from scratch using HTML and JavaScript to showcase academic and professional milestones.</p>
+                <h3>Website Development [cite: 32]</h3>
+                <p style="font-size: 0.9rem;">Created this professional portfolio website from scratch using HTML and JavaScript to showcase academic and professional milestones[cite: 32].</p>
             </div>
         </div>
     </section>
