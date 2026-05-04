@@ -1,3 +1,89 @@
+/* =========================
+   Portfolio Navigation Bar
+========================= */
+
+.portfolio-header {
+    width: 100%;
+    padding: 1rem 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.98);
+    border-bottom: 1px solid #e2e8f0;
+    position: sticky;
+    top: 0;
+    z-index: 3000;
+}
+
+.portfolio-logo {
+    font-weight: 800;
+    font-size: 1.2rem;
+    color: #1e293b;
+    text-decoration: none;
+}
+
+.portfolio-logo span {
+    color: #cc0033;
+}
+
+.portfolio-nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.portfolio-nav a {
+    text-decoration: none;
+    color: #475569;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.portfolio-nav a:hover {
+    color: #cc0033;
+}
+
+.portfolio-nav .btn-app {
+    background: #cc0033;
+    color: white !important;
+    padding: 8px 18px;
+    border-radius: 4px;
+    font-weight: 700;
+    box-shadow: 0 4px 10px rgba(204, 0, 51, 0.18);
+}
+
+.portfolio-nav .btn-app:hover {
+    background: #a8002a;
+    color: white !important;
+    transform: scale(1.05);
+}
+
+.portfolio-nav .btn-cv {
+    background: #1e293b;
+    color: white !important;
+    padding: 8px 18px;
+    border-radius: 4px;
+}
+
+.portfolio-nav .btn-cv:hover {
+    background: #cc0033;
+    color: white !important;
+    transform: scale(1.05);
+}
+
+@media (max-width: 900px) {
+    .portfolio-header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .portfolio-nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+}
 :root {
     --primary-blue: #2c3e50;
     --accent-blue: #3498db;
