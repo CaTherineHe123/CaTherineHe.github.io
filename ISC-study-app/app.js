@@ -1,51 +1,207 @@
 // --- Global State ---
+let allQuestions = [];
 let questions = [];
 let currentIndex = 0;
 let score = 0;
-let timeLeft = 900;
+let timeLeft = 1500; // 25 minutes
 let timerInterval;
 let flaggedQuestions = new Set();
 let userAnswers = [];
+
+let selectedExam = "ISC";
+let selectedDifficulty = "Easy";
+let isPaused = false;
 
 // --- Page Elements ---
 const mainScreen = document.getElementById("main-screen");
 const appLayout = document.getElementById("app-layout");
 const resultModal = document.getElementById("result-modal");
 const reviewScreen = document.getElementById("review-screen");
+const pauseModal = document.getElementById("pause-modal");
 
 // --- Load Questions ---
 async function loadQuestions() {
     try {
         const response = await fetch("questions.json");
-        questions = await response.json();
+        const data = await response.json();
+
+        allQuestions = normalizeQuestions(data);
     } catch (error) {
-        console.error("Audit Failure: Could not load questions.", error);
+        console.error("Could not load questions.json.", error);
+        allQuestions = [];
     }
+}
+
+// --- Normalize Old + New Question Format ---
+function normalizeQuestions(data) {
+    return data.map((q, index) => {
+        return {
+            id: q.id || `Q-${index + 1}`,
+            exam: q.exam || "ISC",
+            difficulty: normalizeDifficulty(q.difficulty || "Easy"),
+            domain: q.domain || "General",
+            question: q.question,
+            options: q.options,
+            answer: q.answer,
+            explanation: q.explanation || "No explanation provided."
+        };
+    });
+}
+
+// --- Normalize Difficulty Names ---
+function normalizeDifficulty(difficulty) {
+    if (!difficulty) return "Easy";
+
+    const d = difficulty.toLowerCase();
+
+    if (d === "easy") return "Easy";
+    if (d === "medium" || d === "mid") return "Medium";
+    if (d === "hard" || d === "difficult") return "Difficult";
+
+    return difficulty;
+}
+
+// --- Menu Choice Setup ---
+function setupMenuChoices() {
+    document.querySelectorAll(".exam-choice").forEach(button => {
+        button.addEventListener("click", () => {
+            document.querySelectorAll(".exam-choice").forEach(btn => {
+                btn.classList.remove("selected");
+            });
+
+            button.classList.add("selected");
+            selectedExam = button.dataset.exam;
+        });
+    });
+
+    document.querySelectorAll(".difficulty-choice").forEach(button => {
+        button.addEventListener("click", () => {
+            document.querySelectorAll(".difficulty-choice").forEach(btn => {
+                btn.classList.remove("selected");
+            });
+
+            button.classList.add("selected");
+            selectedDifficulty = button.dataset.difficulty;
+        });
+    });
 }
 
 // --- Start Exam ---
 async function startExam() {
-    if (questions.length === 0) {
+    if (allQuestions.length === 0) {
         await loadQuestions();
     }
 
+    let filteredQuestions = allQuestions.filter(q =>
+        q.exam === selectedExam && q.difficulty === selectedDifficulty
+    );
+
+    if (filteredQuestions.length < 15) {
+        filteredQuestions = buildFallbackQuestions(selectedExam, selectedDifficulty, filteredQuestions);
+    }
+
+    questions = shuffleArray(filteredQuestions).slice(0, 15);
+
     currentIndex = 0;
     score = 0;
-    timeLeft = 300;
+    timeLeft = 1500;
+    isPaused = false;
     flaggedQuestions = new Set();
     userAnswers = new Array(questions.length).fill(null);
 
     mainScreen.classList.add("hidden");
     reviewScreen.classList.add("hidden");
     resultModal.classList.add("hidden");
+    pauseModal.classList.add("hidden");
     appLayout.classList.remove("hidden");
 
-    document.getElementById("timer").innerText = "15:00";
-    document.getElementById("rank-badge").innerText = "Intern Auditor";
+    document.getElementById("exam-brand").innerText = selectedExam;
+    document.getElementById("timer").innerText = "25:00";
+    document.getElementById("rank-badge").innerText = "Junior Intern";
 
     createQuestionMap();
     displayQuestion();
     startTimer();
+}
+
+// --- Fallback Questions If JSON Has Fewer Than 15 ---
+function buildFallbackQuestions(exam, difficulty, existingQuestions) {
+    const result = [...existingQuestions];
+
+    const templates = {
+        AUD: {
+            domain: "Auditing and Attestation",
+            question: "Which audit procedure is most directly related to obtaining evidence about management assertions?",
+            options: [
+                "Preparing the client’s financial statements",
+                "Performing risk assessment and substantive procedures",
+                "Approving management’s estimates",
+                "Issuing tax guidance to the client"
+            ],
+            answer: 1,
+            explanation: "Auditors obtain evidence through risk assessment procedures, tests of controls, and substantive procedures."
+        },
+        FAR: {
+            domain: "Financial Accounting and Reporting",
+            question: "Which statement best describes accrual accounting?",
+            options: [
+                "Revenue is recorded only when cash is received",
+                "Expenses are recorded only when cash is paid",
+                "Transactions are recorded when earned or incurred",
+                "Only tax-basis transactions are recorded"
+            ],
+            answer: 2,
+            explanation: "Under accrual accounting, revenues and expenses are recognized when earned or incurred, not only when cash changes hands."
+        },
+        REG: {
+            domain: "Regulation and Taxation",
+            question: "Which item is generally important when calculating taxable income?",
+            options: [
+                "Only gross receipts",
+                "Allowable deductions and taxable income rules",
+                "Only book income",
+                "Only cash received from customers"
+            ],
+            answer: 1,
+            explanation: "Taxable income depends on gross income, allowable deductions, exclusions, credits, and applicable tax rules."
+        },
+        ISC: {
+            domain: "Information Systems and Controls",
+            question: "Which control is most related to protecting system access?",
+            options: [
+                "Bank reconciliation",
+                "Multi-factor authentication",
+                "Depreciation schedule",
+                "Inventory count sheet"
+            ],
+            answer: 1,
+            explanation: "Multi-factor authentication strengthens access control by requiring more than one form of verification."
+        }
+    };
+
+    const template = templates[exam] || templates.ISC;
+
+    while (result.length < 15) {
+        const n = result.length + 1;
+
+        result.push({
+            id: `${exam}-${difficulty}-AUTO-${n}`,
+            exam: exam,
+            difficulty: difficulty,
+            domain: template.domain,
+            question: `${template.question} (${exam} ${difficulty} Practice ${n})`,
+            options: template.options,
+            answer: template.answer,
+            explanation: template.explanation
+        });
+    }
+
+    return result;
+}
+
+// --- Shuffle Questions ---
+function shuffleArray(array) {
+    return [...array].sort(() => Math.random() - 0.5);
 }
 
 // --- Display Current Question ---
@@ -55,7 +211,9 @@ function displayQuestion() {
     document.getElementById("q-number").innerText =
         `Question ${currentIndex + 1} of ${questions.length}`;
 
-    document.getElementById("domain-tag").innerText = q.domain;
+    document.getElementById("domain-tag").innerText =
+        `${q.exam} | ${q.difficulty} | ${q.domain}`;
+
     document.getElementById("question-text").innerText = q.question;
 
     const optionsContainer = document.getElementById("options-container");
@@ -171,7 +329,7 @@ function updateUI() {
 
     document.getElementById("next-btn").innerText =
         currentIndex === questions.length - 1
-            ? "Finish Audit"
+            ? "Finish Exam"
             : "Confirm & Next";
 
     updateQuestionMap();
@@ -182,6 +340,8 @@ function startTimer() {
     clearInterval(timerInterval);
 
     timerInterval = setInterval(() => {
+        if (isPaused) return;
+
         timeLeft--;
 
         const mins = Math.floor(timeLeft / 60);
@@ -195,6 +355,18 @@ function startTimer() {
             finishExam();
         }
     }, 1000);
+}
+
+// --- Pause Exam ---
+function pauseExam() {
+    isPaused = true;
+    pauseModal.classList.remove("hidden");
+}
+
+// --- Resume Exam ---
+function resumeExam() {
+    isPaused = false;
+    pauseModal.classList.add("hidden");
 }
 
 // --- Finish Exam ---
@@ -213,28 +385,61 @@ function finishExam() {
     showResultModal(finalPercent);
 }
 
+// --- Rank ---
+function getRank(percent) {
+    if (percent <= 50) {
+        return "Junior Intern";
+    }
+
+    if (percent < 80) {
+        return "Senior Associate";
+    }
+
+    return "Managing Partner";
+}
+
+// --- Result Comments by Exam ---
+function getResultMessage(exam, percent) {
+    const comments = {
+        AUD: {
+            low: "Audit alert: your evidence file needs more work. Review assertions, internal control, and audit reports.",
+            mid: "Nice audit work. You identified several risks, but a few procedures still need better documentation.",
+            high: "Excellent audit judgment. You are ready to lead the engagement team."
+        },
+        FAR: {
+            low: "The financial statements are not balanced yet. Review recognition, measurement, and reporting rules.",
+            mid: "Solid accounting foundation. A few adjustments are still needed before issuing the statements.",
+            high: "Outstanding FAR performance. Your trial balance is clean and ready for reporting."
+        },
+        REG: {
+            low: "The tax return needs another review. Focus on basis, deductions, and entity taxation.",
+            mid: "Good regulatory work. You caught several tax issues, but a few details slipped through.",
+            high: "Excellent REG performance. The IRS would have a hard time finding issues."
+        },
+        ISC: {
+            low: "Still needs a little more audit coffee. Review SOC reports, security, and data controls.",
+            mid: "You found a weakness in a SOC report! Keep sharpening your systems-control judgment.",
+            high: "ISC master — you are ready to sign off."
+        }
+    };
+
+    if (percent <= 50) return comments[exam].low;
+    if (percent < 80) return comments[exam].mid;
+    return comments[exam].high;
+}
+
 // --- Show Result Modal ---
 function showResultModal(percent) {
     resultModal.classList.remove("hidden");
 
+    const rank = getRank(percent);
+
     document.getElementById("final-score").innerText = percent;
-
-    let rank = "";
-    let message = "";
-
-    if (percent === 100) {
-        rank = "Managing Partner";
-        message = "Flawless audit! The AICPA would be proud.";
-    } else if (percent >= 70) {
-        rank = "Senior Auditor";
-        message = "Solid work. Minor documentation issues found.";
-    } else {
-        rank = "Junior Intern";
-        message = "Still needs a little more audit coffee.";
-    }
-
+    document.getElementById("final-rank-title").innerText = rank;
     document.getElementById("rank-badge").innerText = rank;
-    document.getElementById("result-text").innerText = message;
+
+    document.getElementById("result-text").innerText =
+        `${selectedExam} ${selectedDifficulty} Result: ${getResultMessage(selectedExam, percent)}`;
 }
 
 // --- Show Explanation Screen ---
@@ -242,6 +447,7 @@ function showExplanation() {
     resultModal.classList.add("hidden");
     appLayout.classList.add("hidden");
     mainScreen.classList.add("hidden");
+    pauseModal.classList.add("hidden");
     reviewScreen.classList.remove("hidden");
 
     const reviewList = document.getElementById("review-list");
@@ -263,7 +469,7 @@ function showExplanation() {
                 userAnswer === null ? "No answer selected" : q.options[userAnswer];
 
             item.innerHTML = `
-                <h3>Question ${index + 1}</h3>
+                <h3>${q.exam} ${q.difficulty} | Question ${index + 1}</h3>
 
                 <p class="review-question">${q.question}</p>
 
@@ -293,9 +499,11 @@ function showExplanation() {
 // --- Go Back to Main Menu ---
 function goMain() {
     clearInterval(timerInterval);
+    isPaused = false;
 
     resultModal.classList.add("hidden");
     reviewScreen.classList.add("hidden");
+    pauseModal.classList.add("hidden");
     appLayout.classList.add("hidden");
     mainScreen.classList.remove("hidden");
 }
@@ -307,6 +515,10 @@ document.getElementById("next-btn").addEventListener("click", handleNext);
 document.getElementById("prev-btn").addEventListener("click", handlePrev);
 document.getElementById("flag-btn").addEventListener("click", toggleFlag);
 
+document.getElementById("pause-btn").addEventListener("click", pauseExam);
+document.getElementById("resume-btn").addEventListener("click", resumeExam);
+document.getElementById("pause-main-btn").addEventListener("click", goMain);
+
 document.getElementById("header-main-btn").addEventListener("click", goMain);
 
 document.getElementById("retake-btn").addEventListener("click", startExam);
@@ -316,5 +528,6 @@ document.getElementById("explanation-btn").addEventListener("click", showExplana
 document.getElementById("review-main-btn").addEventListener("click", goMain);
 document.getElementById("review-retake-btn").addEventListener("click", startExam);
 
-// Load questions but do not start exam automatically
+// Init
+setupMenuChoices();
 loadQuestions();
