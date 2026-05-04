@@ -3,20 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ISC CPA Exam Sim | Auditor Edition</title>
+    <title>CPA Exam Simulator | Auditor Edition</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <!-- Main Menu Screen -->
     <section id="main-screen" class="main-screen">
         <div class="main-card">
-            <h1>ISC CPA Exam Simulator</h1>
+            <h1>CPA Exam Simulator</h1>
             <p>
-                Practice information systems, SOC reporting, security, confidentiality,
-                privacy, and data management questions.
+                Choose an exam section and difficulty level, then complete a 15-question practice test.
             </p>
+
+            <div class="menu-group">
+                <h3>Select Exam Section</h3>
+                <div class="menu-options exam-options">
+                    <button class="menu-choice exam-choice selected" data-exam="ISC">ISC</button>
+                    <button class="menu-choice exam-choice" data-exam="AUD">AUD</button>
+                    <button class="menu-choice exam-choice" data-exam="FAR">FAR</button>
+                    <button class="menu-choice exam-choice" data-exam="REG">REG</button>
+                </div>
+            </div>
+
+            <div class="menu-group">
+                <h3>Select Difficulty</h3>
+                <div class="menu-options difficulty-options">
+                    <button class="menu-choice difficulty-choice selected" data-difficulty="Easy">Easy</button>
+                    <button class="menu-choice difficulty-choice" data-difficulty="Medium">Medium</button>
+                    <button class="menu-choice difficulty-choice" data-difficulty="Difficult">Difficult</button>
+                </div>
+            </div>
+
             <button id="start-btn" class="btn primary">Start Exam</button>
         </div>
     </section>
@@ -25,21 +45,24 @@
     <div id="app-layout" class="app-layout hidden">
         <header class="exam-header">
             <div class="logo">
-                <span class="brand">ISC</span>
-                <span class="mode">AUDIT SIM</span>
+                <span id="exam-brand" class="brand">ISC</span>
+                <span class="mode">CPA SIM</span>
             </div>
 
-            <button id="header-main-btn" class="btn primary">Main Menu</button>
+            <div class="header-actions">
+                <button id="pause-btn" class="btn primary">Pause</button>
+                <button id="header-main-btn" class="btn primary">Main Menu</button>
+            </div>
 
             <div class="exam-stats">
                 <div class="timer-box">
                     <span class="label">REMAINING TIME</span>
-                    <span id="timer">15:00</span>
+                    <span id="timer">25:00</span>
                 </div>
 
                 <div class="rank-box">
                     <span class="label">CURRENT RANK</span>
-                    <span id="rank-badge">Intern Auditor</span>
+                    <span id="rank-badge">Junior Intern</span>
                 </div>
             </div>
         </header>
@@ -64,12 +87,12 @@
                 <div id="quiz-container" class="card">
                     <div class="q-meta">
                         <span id="domain-tag" class="badge">Loading Domain...</span>
-                        <span id="q-number">Question 1 of 10</span>
                         <button id="flag-btn" class="icon-btn">🚩 Flag for Review</button>
                     </div>
 
                     <div class="q-body">
-                        <h2 id="question-text">Initializing the audit software...</h2>
+                        <h2 id="question-text">Initializing the exam software...</h2>
+                        <span id="q-number">Question 1 of 15</span>
                         <div id="options-container" class="options-grid"></div>
                     </div>
 
@@ -89,18 +112,32 @@
     <!-- Result Modal -->
     <div id="result-modal" class="modal hidden">
         <div class="modal-content">
-            <h1 id="result-title">Audit Report Issued</h1>
+            <h1 id="result-title">Exam Report Issued</h1>
 
             <div class="score-circle">
                 <span id="final-score">0</span><small>%</small>
             </div>
 
+            <h2 id="final-rank-title">Junior Intern</h2>
             <p id="result-text">Your performance has been evaluated.</p>
 
             <div class="modal-actions">
                 <button id="retake-btn" class="btn primary">Retake Exam</button>
                 <button id="main-btn" class="btn primary">Main Menu</button>
                 <button id="explanation-btn" class="btn primary">Explanation</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pause Modal -->
+    <div id="pause-modal" class="modal hidden">
+        <div class="modal-content">
+            <h1>Exam Paused</h1>
+            <p id="pause-text">Take a quick break. The timer is stopped.</p>
+
+            <div class="modal-actions">
+                <button id="resume-btn" class="btn primary">Resume Exam</button>
+                <button id="pause-main-btn" class="btn primary">Main Menu</button>
             </div>
         </div>
     </div>
