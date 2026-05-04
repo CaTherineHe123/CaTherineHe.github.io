@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISC CPA Exam Sim | Auditor Edition</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Main Menu Screen -->
+    <section id="main-screen" class="main-screen">
+        <div class="main-card">
+            <h1>ISC CPA Exam Simulator</h1>
+            <p>
+                Practice information systems, SOC reporting, security, confidentiality,
+                privacy, and data management questions.
+            </p>
+            <button id="start-btn" class="btn primary">Start Exam</button>
+        </div>
+    </section>
+
+    <!-- Exam App -->
+    <div id="app-layout" class="app-layout hidden">
+        <header class="exam-header">
+            <div class="logo">
+                <span class="brand">ISC</span>
+                <span class="mode">AUDIT SIM</span>
+            </div>
+
+            <button id="header-main-btn" class="btn primary">Main Menu</button>
+
+            <div class="exam-stats">
+                <div class="timer-box">
+                    <span class="label">REMAINING TIME</span>
+                    <span id="timer">15:00</span>
+                </div>
+
+                <div class="rank-box">
+                    <span class="label">CURRENT RANK</span>
+                    <span id="rank-badge">Intern Auditor</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <aside class="nav-sidebar">
+                <h3>Question Map</h3>
+
+                <div id="question-grid" class="grid-container"></div>
+
+                <div class="legend">
+                    <span><i class="dot current"></i> Current</span>
+                    <span><i class="dot flagged"></i> Flagged</span>
+                </div>
+            </aside>
+
+            <section class="quiz-section">
+                <div class="progress-container">
+                    <div id="progress-bar" class="progress-fill"></div>
+                </div>
+
+                <div id="quiz-container" class="card">
+                    <div class="q-meta">
+                        <span id="domain-tag" class="badge">Loading Domain...</span>
+                        <span id="q-number">Question 1 of 10</span>
+                        <button id="flag-btn" class="icon-btn">🚩 Flag for Review</button>
+                    </div>
+
+                    <div class="q-body">
+                        <h2 id="question-text">Initializing the audit software...</h2>
+                        <div id="options-container" class="options-grid"></div>
+                    </div>
+
+                    <div id="feedback-area" class="feedback hidden">
+                        <p id="explanation-text"></p>
+                    </div>
+                </div>
+
+                <footer class="controls">
+                    <button id="prev-btn" class="btn secondary" disabled>Previous</button>
+                    <button id="next-btn" class="btn primary">Confirm & Next</button>
+                </footer>
+            </section>
+        </div>
+    </div>
+
+    <!-- Result Modal -->
+    <div id="result-modal" class="modal hidden">
+        <div class="modal-content">
+            <h1 id="result-title">Audit Report Issued</h1>
+
+            <div class="score-circle">
+                <span id="final-score">0</span><small>%</small>
+            </div>
+
+            <p id="result-text">Your performance has been evaluated.</p>
+
+            <div class="modal-actions">
+                <button id="retake-btn" class="btn primary">Retake Exam</button>
+                <button id="main-btn" class="btn primary">Main Menu</button>
+                <button id="explanation-btn" class="btn primary">Explanation</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Explanation / Review Screen -->
+    <section id="review-screen" class="review-screen hidden">
+        <div class="review-card">
+            <h1>Answer Review</h1>
+            <p class="review-subtitle">
+                Review the questions you missed and read the explanations.
+            </p>
+
+            <div id="review-list" class="review-list"></div>
+
+            <div class="review-actions">
+                <button id="review-main-btn" class="btn primary">Main Menu</button>
+                <button id="review-retake-btn" class="btn primary">Retake Exam</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>
