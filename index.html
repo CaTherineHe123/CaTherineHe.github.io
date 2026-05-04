@@ -3,125 +3,529 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ISC CPA Exam Sim | Auditor Edition</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <title>Catherine He | Rutgers Accounting Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary: #1e293b;    
+            --accent: #cc0033;
+            --bg: #ffffff;
+            --text-main: #0f172a;
+            --text-muted: #475569;
+            --card-bg: #f8fafc;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes scaleIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(204, 0, 51, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(204, 0, 51, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(204, 0, 51, 0); }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        header {
+            padding: 1rem 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.98);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .logo {
+            font-weight: 800;
+            font-size: 1.2rem;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-muted);
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent);
+        }
+
+        .btn-app {
+            background: var(--accent);
+            color: white !important;
+            padding: 8px 18px;
+            border-radius: 4px;
+            font-weight: 700;
+            box-shadow: 0 4px 10px rgba(204, 0, 51, 0.18);
+        }
+
+        .btn-app:hover {
+            background: #a8002a;
+            color: white !important;
+            transform: scale(1.05);
+        }
+
+        .btn-cv {
+            background: var(--primary);
+            color: white !important;
+            padding: 8px 18px;
+            border-radius: 4px;
+            transition: 0.3s;
+        }
+
+        .btn-cv:hover {
+            background: var(--accent);
+            transform: scale(1.05);
+        }
+
+        .hero { 
+            padding: 100px 10%; 
+            background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .profile-img-container {
+            width: 250px;
+            height: 250px;
+            flex-shrink: 0;
+            animation: scaleIn 0.8s ease-out;
+        }
+
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--accent);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            display: block;
+        }
+
+        .hero-text {
+            flex: 1;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .social-icons a { 
+            color: var(--primary);
+            font-size: 1.5rem;
+            transition: 0.3s;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            background: white;
+            border-radius: 50%;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .social-icons a:hover { 
+            color: var(--accent); 
+            transform: translateY(-5px); 
+            border-color: var(--accent);
+            animation: pulse 1.5s infinite;
+        }
+
+        .container {
+            padding: 80px 10%;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        .container.reveal {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .section-label { 
+            color: var(--accent); 
+            font-weight: 900; 
+            letter-spacing: 2px; 
+            font-size: 1.2rem;
+            text-transform: uppercase; 
+            margin-bottom: 35px; 
+            display: block; 
+            border-bottom: 2px solid var(--accent);
+            width: fit-content;
+            padding-bottom: 5px;
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card { 
+            background: var(--card-bg);
+            padding: 35px;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0; 
+            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .card:hover { 
+            border-color: var(--accent); 
+            transform: translateY(-10px) scale(1.02); 
+            background: white; 
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1); 
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+
+        .card .subtitle {
+            color: var(--accent);
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .card .date {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            font-style: italic;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .skill-tag { 
+            display: inline-block;
+            background: white;
+            padding: 6px 14px;
+            border-radius: 4px; 
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--primary);
+            border: 1px solid #e2e8f0; 
+            margin: 5px 5px 0 0;
+            transition: 0.3s;
+        }
+
+        .skill-tag:hover {
+            background: var(--accent);
+            color: white;
+            border-color: var(--accent);
+        }
+
+        /* Embedded App Section */
+        .app-section {
+            background: #fafbfc;
+        }
+
+        .app-intro {
+            background: white;
+            padding: 28px;
+            border-radius: 10px;
+            border: 1px solid #e2e8f0;
+            margin-bottom: 28px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+        }
+
+        .app-intro h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+
+        .app-intro p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            max-width: 850px;
+        }
+
+        .app-frame-wrapper {
+            width: 100%;
+            height: 900px;
+            border: 1px solid #e2e8f0;
+            border-radius: 14px;
+            overflow: hidden;
+            background: white;
+            box-shadow: 0 20px 45px rgba(0,0,0,0.10);
+        }
+
+        .app-frame {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+        }
+
+        footer {
+            padding: 40px 10%;
+            background: var(--primary);
+            color: white;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 992px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding-top: 50px;
+            }
+
+            .hero-text {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .social-icons {
+                justify-content: center;
+            }
+
+            .app-frame-wrapper {
+                height: 780px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .container {
+                padding: 60px 6%;
+            }
+
+            .app-frame-wrapper {
+                height: 720px;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <!-- Main Menu Screen -->
-    <section id="main-screen" class="main-screen">
-        <div class="main-card">
-            <h1>ISC CPA Exam Simulator</h1>
+
+    <header>
+        <a href="#" class="logo">CATHERINE <span>HE</span></a>
+
+        <nav>
+            <a href="#education">Education</a>
+            <a href="#experience">Experience</a>
+            <a href="#app" class="btn-app">APP</a>
+            <a href="Assets/Resume.pdf" class="btn-cv" target="_blank">Download Resume</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="profile-img-container">
+            <img src="Assets/ProfilePic.png" alt="Catherine He" class="profile-img">
+        </div>
+
+        <div class="hero-text">
+            <h1>Catherine He</h1>
             <p>
-                Practice information systems, SOC reporting, security, confidentiality,
-                privacy, and data management questions.
+                Accounting student at Rutgers University. Dedicated to precision in financial reporting,
+                auditing, and academic excellence.
             </p>
-            <button id="start-btn" class="btn primary">Start Exam</button>
-        </div>
-    </section>
-
-    <!-- Exam App -->
-    <div id="app-layout" class="app-layout hidden">
-        <header class="exam-header">
-            <div class="logo">
-                <span class="brand">ISC</span>
-                <span class="mode">AUDIT SIM</span>
-            </div>
-
-            <button id="header-main-btn" class="btn primary">Main Menu</button>
-
-            <div class="exam-stats">
-                <div class="timer-box">
-                    <span class="label">REMAINING TIME</span>
-                    <span id="timer">15:00</span>
-                </div>
-
-                <div class="rank-box">
-                    <span class="label">CURRENT RANK</span>
-                    <span id="rank-badge">Intern Auditor</span>
-                </div>
-            </div>
-        </header>
-
-        <div class="main-content">
-            <aside class="nav-sidebar">
-                <h3>Question Map</h3>
-
-                <div id="question-grid" class="grid-container"></div>
-
-                <div class="legend">
-                    <span><i class="dot current"></i> Current</span>
-                    <span><i class="dot flagged"></i> Flagged</span>
-                </div>
-            </aside>
-
-            <section class="quiz-section">
-                <div class="progress-container">
-                    <div id="progress-bar" class="progress-fill"></div>
-                </div>
-
-                <div id="quiz-container" class="card">
-                    <div class="q-meta">
-                        <span id="domain-tag" class="badge">Loading Domain...</span>
-                        <button id="flag-btn" class="icon-btn">🚩 Flag for Review</button>
-                    </div>
-
-                    <div class="q-body">
-                        <h2 id="question-text">Initializing the audit software...</h2>
-                        <span id="q-number">Question 1 of 10</span>
-                        <div id="options-container" class="options-grid"></div>
-                    </div>
-
-                    <div id="feedback-area" class="feedback hidden">
-                        <p id="explanation-text"></p>
-                    </div>
-                </div>
-
-                <footer class="controls">
-                    <button id="prev-btn" class="btn secondary" disabled>Previous</button>
-                    <button id="next-btn" class="btn primary">Confirm & Next</button>
-                </footer>
-            </section>
-        </div>
-    </div>
-
-    <!-- Result Modal -->
-    <div id="result-modal" class="modal hidden">
-        <div class="modal-content">
-            <h1 id="result-title">Audit Report Issued</h1>
-
-            <div class="score-circle">
-                <span id="final-score">0</span><small>%</small>
-            </div>
-
-            <p id="result-text">Your performance has been evaluated.</p>
-
-            <div class="modal-actions">
-                <button id="retake-btn" class="btn primary">Retake Exam</button>
-                <button id="main-btn" class="btn primary">Main Menu</button>
-                <button id="explanation-btn" class="btn primary">Explanation</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Explanation / Review Screen -->
-    <section id="review-screen" class="review-screen hidden">
-        <div class="review-card">
-            <h1>Answer Review</h1>
-            <p class="review-subtitle">
-                Review the questions you missed and read the explanations.
-            </p>
-
-            <div id="review-list" class="review-list"></div>
-
-            <div class="review-actions">
-                <button id="review-main-btn" class="btn primary">Main Menu</button>
-                <button id="review-retake-btn" class="btn primary">Retake Exam</button>
+            
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/catherine-he-125a58295" target="_blank" title="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="mailto:ca.he0919@gmail.com" title="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="tel:7325329681" title="Call Me">
+                    <i class="fas fa-phone"></i>
+                </a>
             </div>
         </div>
     </section>
 
-    <script src="app.js"></script>
+    <section class="container" id="education">
+        <span class="section-label">Education</span>
+
+        <div class="card" style="width: 100%;">
+            <h3>Rutgers, The State University of New Jersey</h3>
+            <p class="subtitle">Bachelor of Science in Accounting | GPA: 3.63/4.00</p>
+            <p>Dean's List: Fall 2023, Spring 2024, Spring 2025, Fall 2026</p>
+            <span class="date">Expected Graduation: Dec 2026</span>
+
+            <p style="margin-top:15px; font-size: 0.95rem;">
+                <strong>Relevant Coursework:</strong> Intermediate Accounting, Income tax Accounting,
+                Concepts of Auditing, Managerial Accounting.
+            </p>
+        </div>
+    </section>
+
+    <section class="container" id="experience" style="background-color: #fafbfc;">
+        <span class="section-label">Professional Experience</span>
+
+        <div class="grid">
+            <div class="card">
+                <h3>Course Grader</h3>
+                <p class="subtitle">Rutgers MSIS Department</p>
+                <span class="date">Jan 2026 – Present</span>
+                <p style="font-size: 0.9rem;">
+                    Grading assignments and exams for ~43 students while ensuring consistency with instructor
+                    standards and maintaining academic record integrity.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Course Grader</h3>
+                <p class="subtitle">Rutgers Department of Mathematics</p>
+                <span class="date">May 2025 – Dec 2025</span>
+                <p style="font-size: 0.9rem;">
+                    Independently evaluated coursework for ~40 students across two sections, ensuring precision
+                    and adherence to academic guidelines.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Selected Participant</h3>
+                <p class="subtitle">TeamUP Mentoring Program</p>
+                <span class="date">Aug 2024 – Jan 2025</span>
+                <p style="font-size: 0.9rem;">
+                    Engaged in semester-long career development with a professional mentor from an accounting
+                    firm to discuss career paths and ethics.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="container" id="skills">
+        <span class="section-label">Skills & Projects</span>
+
+        <div class="grid">
+            <div class="card">
+                <h3>Computer Skills</h3>
+                <div style="margin-top: 10px;">
+                    <span class="skill-tag">Microsoft Word</span>
+                    <span class="skill-tag">PowerPoint</span>
+                    <span class="skill-tag">Excel</span>
+                    <span class="skill-tag">HTML</span>
+                    <span class="skill-tag">JavaScript</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Website Project</h3>
+                <p style="font-size: 0.9rem;">
+                    Developed a professional personal website using HTML and JavaScript to showcase academic achievements.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="container app-section" id="app">
+        <span class="section-label">Interactive App</span>
+
+        <div class="app-intro">
+            <h3>ISC CPA Exam Simulator</h3>
+            <p>
+                This embedded web app provides an interactive audit-style exam practice experience,
+                including multiple-choice questions, scoring, review, and explanations.
+            </p>
+        </div>
+
+        <div class="app-frame-wrapper">
+            <iframe
+                src="ISC-study-app/"
+                title="ISC CPA Exam Simulator"
+                class="app-frame">
+            </iframe>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Catherine He | Rutgers Business School</p>
+    </footer>
+
+    <script>
+        const observerOptions = { threshold: 0.1 };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('reveal');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.container').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+
 </body>
 </html>
