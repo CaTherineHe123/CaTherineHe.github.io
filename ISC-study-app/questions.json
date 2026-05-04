@@ -1,92 +1,2702 @@
 [
   {
-    "id": "ISC-001",
-    "domain": "Security, Confidentiality, and Privacy",
+    "id": "ISC-E-001",
+    "exam": "ISC",
     "difficulty": "Easy",
-    "question": "Which SOC report is primarily designed for general use and provides a summary of the auditor's opinion without disclosing detailed test results?",
-    "options": ["SOC 1 Type II", "SOC 2 Type I", "SOC 3", "SOC 2 Type II"],
+    "domain": "SOC Reports",
+    "question": "Which SOC report is designed for general public use?",
+    "options": [
+      "SOC 1 Type II",
+      "SOC 2 Type II",
+      "SOC 3",
+      "Internal audit report"
+    ],
     "answer": 2,
-    "explanation": "SOC 3 reports are 'general use' reports that provide only the auditor's opinion and the seal, making them suitable for public marketing, unlike SOC 2 which is restricted use."
+    "explanation": "SOC 3 reports are general-use reports that summarize the auditor's opinion without detailed testing results."
   },
   {
-    "id": "ISC-002",
-    "domain": "Information Systems and Data Management",
-    "difficulty": "Medium",
-    "question": "An auditor is evaluating a client's cloud strategy. Which service model allows the client to manage the operating system and middleware?",
-    "options": ["SaaS", "PaaS", "IaaS", "DaaS"],
-    "answer": 2,
-    "explanation": "Infrastructure as a Service (IaaS) provides the highest level of control, allowing users to manage OS, storage, and deployed applications."
-  },
-  {
-    "id": "ISC-003",
-    "domain": "Security, Confidentiality, and Privacy",
-    "difficulty": "Hard",
-    "question": "Under the SOC 2 Trust Services Criteria, which of the following is the ONLY mandatory criteria that must be included in every report?",
-    "options": ["Availability", "Confidentiality", "Security", "Processing Integrity"],
-    "answer": 2,
-    "explanation": "The 'Security' criteria (also known as Common Criteria) is the baseline and must be included in every SOC 2 report."
-  },
-  {
-    "id": "ISC-004",
-    "domain": "Information Systems and Data Management",
-    "difficulty": "Medium",
-    "question": "Which of the following is the primary purpose of a 'Data Dictionary' in database management?",
-    "options": ["To encrypt sensitive fields", "To store the actual data records", "To define the structure and metadata of the database", "To create automated backups"],
-    "answer": 2,
-    "explanation": "A data dictionary contains metadata—definitions of data elements, relationships, and properties—not the data itself."
-  },
-  {
-    "id": "ISC-005",
-    "domain": "Security, Confidentiality, and Privacy",
-    "difficulty": "Medium",
-    "question": "A company uses MFA (Multi-Factor Authentication). A hardware token that generates a one-time code represents which factor?",
-    "options": ["Something you know", "Something you have", "Something you are", "Something you do"],
-    "answer": 1,
-    "explanation": "A hardware token is a physical object, representing 'Something you have'. Password is 'know', and Biometrics is 'are'."
-  },
-  {
-    "id": "ISC-006",
-    "domain": "Information Systems and Data Management",
-    "difficulty": "Hard",
-    "question": "In a relational database, what ensures that a value in a foreign key column matches a value in the corresponding primary key column?",
-    "options": ["Data Normalization", "Referential Integrity", "Entity Integrity", "Concurrency Control"],
-    "answer": 1,
-    "explanation": "Referential integrity is a database concept that ensures relationships between tables remain consistent through foreign key constraints."
-  },
-  {
-    "id": "ISC-007",
-    "domain": "Security, Confidentiality, and Privacy",
+    "id": "ISC-E-002",
+    "exam": "ISC",
     "difficulty": "Easy",
-    "question": "Which of the following describes a 'Phishing' attack?",
-    "options": ["Physical theft of a laptop", "Intercepting Wi-Fi signals", "Sending fraudulent emails to trick users into revealing info", "Overwhelming a server with traffic"],
+    "domain": "Access Controls",
+    "question": "Which control best reduces the risk of unauthorized login?",
+    "options": [
+      "Multi-factor authentication",
+      "A larger monitor",
+      "A faster router",
+      "A monthly sales report"
+    ],
+    "answer": 0,
+    "explanation": "Multi-factor authentication requires more than one verification factor and strengthens access security."
+  },
+  {
+    "id": "ISC-E-003",
+    "exam": "ISC",
+    "difficulty": "Easy",
+    "domain": "Cybersecurity",
+    "question": "What is phishing?",
+    "options": [
+      "A backup process",
+      "A fake message used to trick users into sharing information",
+      "A database index",
+      "A firewall configuration"
+    ],
+    "answer": 1,
+    "explanation": "Phishing is a social engineering attack that tricks users into revealing sensitive information."
+  },
+  {
+    "id": "ISC-E-004",
+    "exam": "ISC",
+    "difficulty": "Easy",
+    "domain": "Data Management",
+    "question": "What does a data dictionary describe?",
+    "options": [
+      "Employee passwords",
+      "Database structure and metadata",
+      "Only cash receipts",
+      "A company logo"
+    ],
+    "answer": 1,
+    "explanation": "A data dictionary defines data fields, formats, relationships, and other metadata."
+  },
+  {
+    "id": "ISC-E-005",
+    "exam": "ISC",
+    "difficulty": "Easy",
+    "domain": "Cloud Computing",
+    "question": "Which cloud model gives the customer the most control over operating systems?",
+    "options": [
+      "SaaS",
+      "PaaS",
+      "IaaS",
+      "DaaS"
+    ],
     "answer": 2,
-    "explanation": "Phishing is a social engineering attack where the attacker poses as a trusted entity via email to steal credentials."
+    "explanation": "IaaS provides infrastructure and allows customers to manage operating systems and applications."
   },
   {
-    "id": "ISC-008",
-    "domain": "Information Systems and Data Management",
-    "difficulty": "Medium",
-    "question": "When an auditor tests a Disaster Recovery Plan, which test involves moving operations to an alternate site in real-time?",
-    "options": ["Table-top Exercise", "Walkthrough", "Parallel Test", "Full Interruption Test"],
-    "answer": 3,
-    "explanation": "A full interruption test involves shutting down the primary site and moving all operations to the DR site, which is the most comprehensive test."
-  },
-  {
-    "id": "ISC-009",
-    "domain": "Security, Confidentiality, and Privacy",
-    "difficulty": "Hard",
-    "question": "Which of the following encryption methods uses a public key and a private key pair?",
-    "options": ["Symmetric Encryption", "Asymmetric Encryption", "Hashing", "Salting"],
+    "id": "ISC-E-006",
+    "exam": "ISC",
+    "difficulty": "Easy",
+    "domain": "Encryption",
+    "question": "Which method uses a public key and a private key?",
+    "options": [
+      "Symmetric encryption",
+      "Asymmetric encryption",
+      "Hashing",
+      "Compression"
+    ],
     "answer": 1,
-    "explanation": "Asymmetric encryption (Public Key Cryptography) uses two different but mathematically linked keys."
+    "explanation": "Asymmetric encryption uses a mathematically related public and private key pair."
   },
   {
-    "id": "ISC-010",
-    "domain": "Information Systems and Data Management",
-    "difficulty": "Medium",
-    "question": "What is the primary risk of using 'Shadow IT' within an accounting firm?",
-    "options": ["Increased hardware costs", "Lack of IT oversight and security compliance", "Faster software deployment", "Improved employee morale"],
+    "id": "ISC-E-007",
+    "exam": "ISC",
+    "difficulty": "Easy",
+    "domain": "Business Continuity",
+    "question": "What is the purpose of a disaster recovery plan?",
+    "options": [
+      "To calculate payroll",
+      "To restore IT operations after a disruption",
+      "To approve dividends",
+      "To create invoices"
+    ],
     "answer": 1,
-    "explanation": "Shadow IT (using software without IT's approval) creates massive security and compliance risks because the data is not being monitored or backed up by the firm."
+    "explanation": "A disaster recovery plan defines how technology operations are restored after an outage or disaster."
+  },
+  {
+    "id": "ISC-E-008",
+    "exam": "ISC",
+    "difficulty": "Easy",
+    "domain": "System Controls",
+    "question": "Which is an example of an application control?",
+    "options": [
+      "Input validation",
+      "Office lighting",
+      "Employee lunch policy",
+      "Parking permit"
+    ],
+    "answer": 0,
+    "explanation": "Input validation is an application control that checks data for completeness and reasonableness."
+  },
+  {
+    "id": "ISC-E-009",
+    "exam": "ISC",
+    "difficulty": "Easy",
+    "domain": "Privacy",
+    "question": "What type of data is usually considered personally identifiable information?",
+    "options": [
+      "A customer’s name and Social Security number",
+      "A random product code",
+      "A public weather forecast",
+      "A generic chart title"
+    ],
+    "answer": 0,
+    "explanation": "PII can identify a person directly or indirectly, such as names, SSNs, addresses, or account numbers."
+  },
+  {
+    "id": "ISC-E-010",
+    "exam": "ISC",
+    "difficulty": "Easy",
+    "domain": "IT Governance",
+    "question": "Who is usually responsible for setting overall IT governance expectations?",
+    "options": [
+      "Board and senior management",
+      "Only temporary employees",
+      "Customers",
+      "The mailroom"
+    ],
+    "answer": 0,
+    "explanation": "IT governance is driven by the board and senior management through strategy, policies, and oversight."
+  },
+  {
+    "id": "ISC-E-011",
+    "exam": "ISC",
+    "difficulty": "Easy",
+    "domain": "Authentication",
+    "question": "A fingerprint scan is which authentication factor?",
+    "options": [
+      "Something you know",
+      "Something you have",
+      "Something you are",
+      "Something you buy"
+    ],
+    "answer": 2,
+    "explanation": "Biometrics such as fingerprints are 'something you are'."
+  },
+  {
+    "id": "ISC-E-012",
+    "exam": "ISC",
+    "difficulty": "Easy",
+    "domain": "Security Awareness",
+    "question": "Why do companies train employees on cybersecurity?",
+    "options": [
+      "To reduce human-error risks",
+      "To increase paper use",
+      "To avoid using passwords",
+      "To eliminate all audits"
+    ],
+    "answer": 0,
+    "explanation": "Security awareness training helps reduce risks from phishing, weak passwords, and unsafe behavior."
+  },
+  {
+    "id": "ISC-E-013",
+    "exam": "ISC",
+    "difficulty": "Easy",
+    "domain": "Backup Controls",
+    "question": "Why should backups be tested?",
+    "options": [
+      "To prove they can be restored",
+      "To make files larger",
+      "To change tax rates",
+      "To remove all controls"
+    ],
+    "answer": 0,
+    "explanation": "Backups are useful only if they can be restored successfully when needed."
+  },
+  {
+    "id": "ISC-E-014",
+    "exam": "ISC",
+    "difficulty": "Easy",
+    "domain": "Network Security",
+    "question": "What does a firewall primarily do?",
+    "options": [
+      "Filters network traffic",
+      "Prepares bank reconciliations",
+      "Records depreciation",
+      "Issues audit opinions"
+    ],
+    "answer": 0,
+    "explanation": "A firewall helps control allowed and blocked network traffic based on rules."
+  },
+  {
+    "id": "ISC-E-015",
+    "exam": "ISC",
+    "difficulty": "Easy",
+    "domain": "Change Management",
+    "question": "Why should system changes be approved before implementation?",
+    "options": [
+      "To reduce risk of unauthorized or faulty changes",
+      "To slow down employees for no reason",
+      "To remove documentation",
+      "To hide errors"
+    ],
+    "answer": 0,
+    "explanation": "Approval helps ensure changes are authorized, tested, and properly documented."
+  },
+  {
+    "id": "ISC-M-001",
+    "exam": "ISC",
+    "difficulty": "Medium",
+    "domain": "SOC Reports",
+    "question": "In a SOC 2 engagement, which Trust Services Criteria category is mandatory?",
+    "options": [
+      "Availability",
+      "Confidentiality",
+      "Security",
+      "Privacy"
+    ],
+    "answer": 2,
+    "explanation": "Security is the common criteria and is required in every SOC 2 report."
+  },
+  {
+    "id": "ISC-M-002",
+    "exam": "ISC",
+    "difficulty": "Medium",
+    "domain": "Access Controls",
+    "question": "Which issue is most directly caused by excessive user privileges?",
+    "options": [
+      "Users can perform unauthorized actions",
+      "The office temperature changes",
+      "Invoices print faster",
+      "Bank interest increases"
+    ],
+    "answer": 0,
+    "explanation": "Excessive privileges violate least privilege and increase the risk of unauthorized activity."
+  },
+  {
+    "id": "ISC-M-003",
+    "exam": "ISC",
+    "difficulty": "Medium",
+    "domain": "Change Management",
+    "question": "Which evidence best supports that a production change was authorized?",
+    "options": [
+      "Approved change ticket",
+      "A hallway conversation",
+      "A blank spreadsheet",
+      "A weather report"
+    ],
+    "answer": 0,
+    "explanation": "An approved change ticket provides documented authorization for the change."
+  },
+  {
+    "id": "ISC-M-004",
+    "exam": "ISC",
+    "difficulty": "Medium",
+    "domain": "Data Integrity",
+    "question": "Referential integrity is mainly concerned with what?",
+    "options": [
+      "Valid relationships between primary and foreign keys",
+      "Employee vacation schedules",
+      "Marketing colors",
+      "Printer settings"
+    ],
+    "answer": 0,
+    "explanation": "Referential integrity ensures foreign key values match valid primary key values."
+  },
+  {
+    "id": "ISC-M-005",
+    "exam": "ISC",
+    "difficulty": "Medium",
+    "domain": "Incident Response",
+    "question": "What is the main purpose of an incident response plan?",
+    "options": [
+      "To guide detection, containment, and recovery from security events",
+      "To calculate depreciation",
+      "To approve vendor meals",
+      "To replace all employees"
+    ],
+    "answer": 0,
+    "explanation": "Incident response plans organize roles and steps for handling security incidents."
+  },
+  {
+    "id": "ISC-M-006",
+    "exam": "ISC",
+    "difficulty": "Medium",
+    "domain": "Cloud Risk",
+    "question": "What is a common risk of using cloud services without approval?",
+    "options": [
+      "Shadow IT and lack of oversight",
+      "Higher keyboard quality",
+      "Better office chairs",
+      "Lower audit risk automatically"
+    ],
+    "answer": 0,
+    "explanation": "Unapproved cloud tools may bypass security review, monitoring, and data protection policies."
+  },
+  {
+    "id": "ISC-M-007",
+    "exam": "ISC",
+    "difficulty": "Medium",
+    "domain": "Logging",
+    "question": "Why are system logs important?",
+    "options": [
+      "They support monitoring and investigation",
+      "They replace financial statements",
+      "They approve budgets",
+      "They guarantee no fraud"
+    ],
+    "answer": 0,
+    "explanation": "Logs provide evidence of system activity and can help investigate incidents."
+  },
+  {
+    "id": "ISC-M-008",
+    "exam": "ISC",
+    "difficulty": "Medium",
+    "domain": "Segregation of Duties",
+    "question": "Which IT situation creates a segregation of duties concern?",
+    "options": [
+      "A developer can both write and move code to production without review",
+      "A user changes their password",
+      "A manager reads a report",
+      "A firewall blocks traffic"
+    ],
+    "answer": 0,
+    "explanation": "Developers should not independently develop and promote production changes without approval."
+  },
+  {
+    "id": "ISC-M-009",
+    "exam": "ISC",
+    "difficulty": "Medium",
+    "domain": "Availability",
+    "question": "Which control most directly supports system availability?",
+    "options": [
+      "Redundant servers",
+      "More colorful reports",
+      "Manual signatures only",
+      "Deleting backups"
+    ],
+    "answer": 0,
+    "explanation": "Redundancy helps keep services available if a component fails."
+  },
+  {
+    "id": "ISC-M-010",
+    "exam": "ISC",
+    "difficulty": "Medium",
+    "domain": "Encryption",
+    "question": "Why is hashing usually used for password storage?",
+    "options": [
+      "It creates a one-way representation of the password",
+      "It allows anyone to read the password",
+      "It removes the need for authentication",
+      "It prints passwords on reports"
+    ],
+    "answer": 0,
+    "explanation": "Hashing stores a one-way digest so the original password is not directly stored."
+  },
+  {
+    "id": "ISC-M-011",
+    "exam": "ISC",
+    "difficulty": "Medium",
+    "domain": "Vendor Risk",
+    "question": "Why should third-party service providers be monitored?",
+    "options": [
+      "They may affect security, availability, or confidentiality",
+      "They always eliminate audit risk",
+      "They are not part of IT risk",
+      "They control tax law"
+    ],
+    "answer": 0,
+    "explanation": "Vendors can process or access sensitive data and must be evaluated and monitored."
+  },
+  {
+    "id": "ISC-M-012",
+    "exam": "ISC",
+    "difficulty": "Medium",
+    "domain": "Business Continuity",
+    "question": "Which test is most disruptive but most realistic?",
+    "options": [
+      "Full interruption test",
+      "Checklist review",
+      "Tabletop exercise",
+      "Policy reading"
+    ],
+    "answer": 0,
+    "explanation": "A full interruption test actually shifts operations and is more realistic but riskier."
+  },
+  {
+    "id": "ISC-M-013",
+    "exam": "ISC",
+    "difficulty": "Medium",
+    "domain": "Privacy",
+    "question": "Which principle limits data collection to what is necessary?",
+    "options": [
+      "Data minimization",
+      "Revenue recognition",
+      "Going concern",
+      "Trial balance"
+    ],
+    "answer": 0,
+    "explanation": "Data minimization means collecting and retaining only necessary personal data."
+  },
+  {
+    "id": "ISC-M-014",
+    "exam": "ISC",
+    "difficulty": "Medium",
+    "domain": "Application Controls",
+    "question": "Which control checks whether entered quantities are within expected limits?",
+    "options": [
+      "Reasonableness check",
+      "Public key encryption",
+      "Board minutes",
+      "Depreciation method"
+    ],
+    "answer": 0,
+    "explanation": "A reasonableness check tests whether data falls within expected ranges."
+  },
+  {
+    "id": "ISC-M-015",
+    "exam": "ISC",
+    "difficulty": "Medium",
+    "domain": "SOC 1 vs SOC 2",
+    "question": "SOC 1 reports are most relevant to which subject?",
+    "options": [
+      "Controls relevant to user entities' internal control over financial reporting",
+      "Only marketing claims",
+      "Only physical inventory counts",
+      "Only tax penalties"
+    ],
+    "answer": 0,
+    "explanation": "SOC 1 focuses on controls that may affect user entities' ICFR."
+  },
+  {
+    "id": "ISC-D-001",
+    "exam": "ISC",
+    "difficulty": "Difficult",
+    "domain": "SOC Reports",
+    "question": "A user auditor needs detailed control tests and results for a service organization affecting ICFR. Which report is most appropriate?",
+    "options": [
+      "SOC 3",
+      "SOC 1 Type II",
+      "SOC 2 Type I",
+      "Cybersecurity risk brochure"
+    ],
+    "answer": 1,
+    "explanation": "SOC 1 Type II provides design and operating effectiveness testing for controls relevant to ICFR."
+  },
+  {
+    "id": "ISC-D-002",
+    "exam": "ISC",
+    "difficulty": "Difficult",
+    "domain": "Access Controls",
+    "question": "An employee transfers departments but keeps access to the old department’s systems. Which control failed?",
+    "options": [
+      "User access review",
+      "Encryption key rotation",
+      "Bank confirmation",
+      "Depreciation approval"
+    ],
+    "answer": 0,
+    "explanation": "Periodic access reviews should detect inappropriate or outdated access rights."
+  },
+  {
+    "id": "ISC-D-003",
+    "exam": "ISC",
+    "difficulty": "Difficult",
+    "domain": "Change Management",
+    "question": "A programmer makes an emergency fix directly in production and documents it later. What is the best audit concern?",
+    "options": [
+      "Lack of prior authorization and testing",
+      "Too many signatures on checks",
+      "Inventory is counted too often",
+      "The system is too fast"
+    ],
+    "answer": 0,
+    "explanation": "Emergency changes still need controlled approval, testing when possible, and timely retrospective review."
+  },
+  {
+    "id": "ISC-D-004",
+    "exam": "ISC",
+    "difficulty": "Difficult",
+    "domain": "Data Governance",
+    "question": "A company cannot identify the owner of critical customer data. Which governance issue is most likely?",
+    "options": [
+      "Lack of data ownership and accountability",
+      "Strong data classification",
+      "Perfect metadata controls",
+      "Excessive audit evidence"
+    ],
+    "answer": 0,
+    "explanation": "Data governance requires clear ownership and accountability for data quality, security, and usage."
+  },
+  {
+    "id": "ISC-D-005",
+    "exam": "ISC",
+    "difficulty": "Difficult",
+    "domain": "Incident Response",
+    "question": "After a ransomware event, the team cannot determine what happened because logs were overwritten. Which control weakness is most relevant?",
+    "options": [
+      "Insufficient log retention",
+      "Overstated revenue",
+      "Too many bank reconciliations",
+      "Excessive insurance"
+    ],
+    "answer": 0,
+    "explanation": "Log retention supports forensic analysis and incident investigation."
+  },
+  {
+    "id": "ISC-D-006",
+    "exam": "ISC",
+    "difficulty": "Difficult",
+    "domain": "Cloud Shared Responsibility",
+    "question": "In IaaS, which responsibility usually remains with the customer?",
+    "options": [
+      "Securing operating systems and applications",
+      "Maintaining the cloud provider's physical data center",
+      "Replacing the provider’s hardware",
+      "Operating the provider’s power grid"
+    ],
+    "answer": 0,
+    "explanation": "In IaaS, the customer typically manages OS, applications, data, and access controls."
+  },
+  {
+    "id": "ISC-D-007",
+    "exam": "ISC",
+    "difficulty": "Difficult",
+    "domain": "Encryption",
+    "question": "Which situation best demonstrates key management risk?",
+    "options": [
+      "Encryption keys are stored in the same unsecured folder as encrypted data",
+      "Passwords expire periodically",
+      "Logs are reviewed daily",
+      "Backups are tested"
+    ],
+    "answer": 0,
+    "explanation": "If keys are stored insecurely with data, encryption may not protect confidentiality."
+  },
+  {
+    "id": "ISC-D-008",
+    "exam": "ISC",
+    "difficulty": "Difficult",
+    "domain": "Business Continuity",
+    "question": "A company has backups but no documented recovery time objectives. What is missing?",
+    "options": [
+      "Defined recovery expectations",
+      "Tax basis schedules",
+      "Sales discounts",
+      "Audit opinion wording"
+    ],
+    "answer": 0,
+    "explanation": "Recovery time objectives define how quickly systems must be restored."
+  },
+  {
+    "id": "ISC-D-009",
+    "exam": "ISC",
+    "difficulty": "Difficult",
+    "domain": "SOC 2 Scope",
+    "question": "A service organization excludes a subservice organization using the carve-out method. What should user auditors consider?",
+    "options": [
+      "Complementary subservice organization controls may need separate evaluation",
+      "The subservice organization has no impact",
+      "All controls are automatically tested",
+      "The SOC report becomes public use"
+    ],
+    "answer": 0,
+    "explanation": "Under carve-out, subservice controls are excluded and may require additional evaluation."
+  },
+  {
+    "id": "ISC-D-010",
+    "exam": "ISC",
+    "difficulty": "Difficult",
+    "domain": "Segregation of Duties",
+    "question": "Which access combination creates the highest financial reporting IT risk?",
+    "options": [
+      "Ability to create vendors and approve payments",
+      "Ability to read public policies",
+      "Ability to view training videos",
+      "Ability to print public forms"
+    ],
+    "answer": 0,
+    "explanation": "Combining vendor creation and payment approval can allow unauthorized or fraudulent payments."
+  },
+  {
+    "id": "ISC-D-011",
+    "exam": "ISC",
+    "difficulty": "Difficult",
+    "domain": "Privacy",
+    "question": "A company keeps customer data indefinitely without a business need. Which privacy risk is most direct?",
+    "options": [
+      "Excessive retention risk",
+      "Improved minimization",
+      "Reduced breach impact",
+      "Perfect compliance"
+    ],
+    "answer": 0,
+    "explanation": "Keeping data longer than necessary increases privacy and breach exposure."
+  },
+  {
+    "id": "ISC-D-012",
+    "exam": "ISC",
+    "difficulty": "Difficult",
+    "domain": "Application Controls",
+    "question": "A system accepts duplicate invoice numbers from the same vendor. Which control is missing?",
+    "options": [
+      "Duplicate check",
+      "Firewall rule",
+      "Public key certificate",
+      "Tabletop exercise"
+    ],
+    "answer": 0,
+    "explanation": "Duplicate checks help prevent duplicate payments or duplicate transaction processing."
+  },
+  {
+    "id": "ISC-D-013",
+    "exam": "ISC",
+    "difficulty": "Difficult",
+    "domain": "ITGC",
+    "question": "Why are IT general controls important for automated application controls?",
+    "options": [
+      "Weak ITGCs can undermine reliance on automated controls",
+      "They replace all substantive testing",
+      "They only affect marketing",
+      "They guarantee profitability"
+    ],
+    "answer": 0,
+    "explanation": "Access, change management, and operations controls support the reliability of automated controls."
+  },
+  {
+    "id": "ISC-D-014",
+    "exam": "ISC",
+    "difficulty": "Difficult",
+    "domain": "Cybersecurity",
+    "question": "An attacker uses stolen credentials from a valid employee. Which control would most directly reduce this risk?",
+    "options": [
+      "MFA and anomalous login monitoring",
+      "More depreciation schedules",
+      "Physical inventory tags only",
+      "Longer invoice numbers"
+    ],
+    "answer": 0,
+    "explanation": "MFA and monitoring reduce the risk of misuse of stolen credentials."
+  },
+  {
+    "id": "ISC-D-015",
+    "exam": "ISC",
+    "difficulty": "Difficult",
+    "domain": "Data Analytics",
+    "question": "An auditor finds a large number of transactions posted by a terminated user ID. What is the best next step?",
+    "options": [
+      "Investigate user access termination and transaction authorization",
+      "Ignore because user IDs are not relevant",
+      "Delete the data",
+      "Assume all are valid"
+    ],
+    "answer": 0,
+    "explanation": "Transactions by terminated users may indicate access removal failure or unauthorized activity."
+  },
+    {
+    "id": "AUD-E-001",
+    "exam": "AUD",
+    "difficulty": "Easy",
+    "domain": "Audit Evidence",
+    "question": "Which evidence is generally most reliable?",
+    "options": [
+      "Management oral statement",
+      "Externally generated evidence received directly by the auditor",
+      "Unreviewed client spreadsheet",
+      "Casual conversation"
+    ],
+    "answer": 1,
+    "explanation": "Evidence from independent external sources received directly by the auditor is generally more reliable."
+  },
+  {
+    "id": "AUD-E-002",
+    "exam": "AUD",
+    "difficulty": "Easy",
+    "domain": "Audit Planning",
+    "question": "What is the purpose of audit planning?",
+    "options": [
+      "To design an effective audit approach",
+      "To guarantee no misstatements",
+      "To prepare the client’s tax return",
+      "To replace audit evidence"
+    ],
+    "answer": 0,
+    "explanation": "Planning helps auditors understand risks and design appropriate procedures."
+  },
+  {
+    "id": "AUD-E-003",
+    "exam": "AUD",
+    "difficulty": "Easy",
+    "domain": "Materiality",
+    "question": "Materiality helps auditors decide what?",
+    "options": [
+      "Which misstatements could influence users",
+      "The client’s stock price",
+      "Employee salaries",
+      "Weather risk"
+    ],
+    "answer": 0,
+    "explanation": "Materiality relates to whether information could influence users' decisions."
+  },
+  {
+    "id": "AUD-E-004",
+    "exam": "AUD",
+    "difficulty": "Easy",
+    "domain": "Internal Control",
+    "question": "Which component involves the tone at the top?",
+    "options": [
+      "Control environment",
+      "Bank reconciliation",
+      "Substantive testing",
+      "Sampling interval"
+    ],
+    "answer": 0,
+    "explanation": "The control environment includes integrity, ethics, and oversight by governance and management."
+  },
+  {
+    "id": "AUD-E-005",
+    "exam": "AUD",
+    "difficulty": "Easy",
+    "domain": "Audit Risk",
+    "question": "Audit risk is the risk that the auditor does what?",
+    "options": [
+      "Issues an inappropriate opinion when statements are materially misstated",
+      "Finds all errors",
+      "Prepares management reports",
+      "Sets tax law"
+    ],
+    "answer": 0,
+    "explanation": "Audit risk is the risk of an inappropriate opinion on materially misstated financial statements."
+  },
+  {
+    "id": "AUD-E-006",
+    "exam": "AUD",
+    "difficulty": "Easy",
+    "domain": "Assertions",
+    "question": "Which assertion relates to recorded assets actually existing?",
+    "options": [
+      "Existence",
+      "Completeness",
+      "Cutoff",
+      "Classification"
+    ],
+    "answer": 0,
+    "explanation": "Existence addresses whether recorded assets, liabilities, and transactions are real."
+  },
+  {
+    "id": "AUD-E-007",
+    "exam": "AUD",
+    "difficulty": "Easy",
+    "domain": "Confirmations",
+    "question": "Bank confirmations are commonly used to verify what?",
+    "options": [
+      "Cash balances and banking arrangements",
+      "Office furniture color",
+      "Employee lunch orders",
+      "Website traffic"
+    ],
+    "answer": 0,
+    "explanation": "Bank confirmations provide external evidence about cash and related arrangements."
+  },
+  {
+    "id": "AUD-E-008",
+    "exam": "AUD",
+    "difficulty": "Easy",
+    "domain": "Audit Opinion",
+    "question": "An unmodified opinion means what?",
+    "options": [
+      "Financial statements are presented fairly in all material respects",
+      "The company is risk free",
+      "All controls are perfect",
+      "The auditor prepared the statements"
+    ],
+    "answer": 0,
+    "explanation": "An unmodified opinion indicates fair presentation in accordance with the applicable framework."
+  },
+  {
+    "id": "AUD-E-009",
+    "exam": "AUD",
+    "difficulty": "Easy",
+    "domain": "Independence",
+    "question": "Auditor independence is important because it supports what?",
+    "options": [
+      "Objectivity and credibility",
+      "Client marketing",
+      "Inventory storage",
+      "Payroll speed"
+    ],
+    "answer": 0,
+    "explanation": "Independence supports the auditor's objectivity and the credibility of the audit opinion."
+  },
+  {
+    "id": "AUD-E-010",
+    "exam": "AUD",
+    "difficulty": "Easy",
+    "domain": "Substantive Procedures",
+    "question": "Substantive procedures are designed to detect what?",
+    "options": [
+      "Material misstatements",
+      "Employee preferences",
+      "Marketing strategy",
+      "Office repairs"
+    ],
+    "answer": 0,
+    "explanation": "Substantive procedures obtain evidence about amounts and disclosures."
+  },
+  {
+    "id": "AUD-E-011",
+    "exam": "AUD",
+    "difficulty": "Easy",
+    "domain": "Observation",
+    "question": "Observation is useful for testing which activity?",
+    "options": [
+      "Inventory count procedures",
+      "Bank interest rates",
+      "Tax law changes",
+      "Customer satisfaction only"
+    ],
+    "answer": 0,
+    "explanation": "Auditors may observe inventory counts to evaluate the client's counting procedures."
+  },
+  {
+    "id": "AUD-E-012",
+    "exam": "AUD",
+    "difficulty": "Easy",
+    "domain": "Reperformance",
+    "question": "Reperformance means the auditor does what?",
+    "options": [
+      "Independently executes a control or calculation",
+      "Asks only management",
+      "Deletes records",
+      "Approves journal entries"
+    ],
+    "answer": 0,
+    "explanation": "Reperformance involves independently performing a procedure or control."
+  },
+  {
+    "id": "AUD-E-013",
+    "exam": "AUD",
+    "difficulty": "Easy",
+    "domain": "Documentation",
+    "question": "Audit documentation should show what?",
+    "options": [
+      "Work performed, evidence obtained, and conclusions reached",
+      "Only final invoice totals",
+      "Only employee names",
+      "Only company slogans"
+    ],
+    "answer": 0,
+    "explanation": "Documentation supports the audit work and conclusions."
+  },
+  {
+    "id": "AUD-E-014",
+    "exam": "AUD",
+    "difficulty": "Easy",
+    "domain": "Management Representations",
+    "question": "Written representations are obtained from whom?",
+    "options": [
+      "Management",
+      "Only customers",
+      "Only competitors",
+      "Only regulators"
+    ],
+    "answer": 0,
+    "explanation": "Management provides written representations about its responsibilities and assertions."
+  },
+  {
+    "id": "AUD-E-015",
+    "exam": "AUD",
+    "difficulty": "Easy",
+    "domain": "Going Concern",
+    "question": "Going concern evaluation relates to what?",
+    "options": [
+      "The entity’s ability to continue operating",
+      "The color of the annual report",
+      "Employee parking",
+      "Advertising design"
+    ],
+    "answer": 0,
+    "explanation": "Auditors evaluate whether substantial doubt exists about the entity's ability to continue as a going concern."
+  },
+  {
+    "id": "AUD-M-001",
+    "exam": "AUD",
+    "difficulty": "Medium",
+    "domain": "Risk Assessment",
+    "question": "Which procedure is most likely part of risk assessment?",
+    "options": [
+      "Analytical procedures during planning",
+      "Issuing the audit report first",
+      "Approving client journal entries",
+      "Preparing payroll checks"
+    ],
+    "answer": 0,
+    "explanation": "Analytical procedures during planning help identify unusual relationships and risks."
+  },
+  {
+    "id": "AUD-M-002",
+    "exam": "AUD",
+    "difficulty": "Medium",
+    "domain": "Internal Control",
+    "question": "A walkthrough helps the auditor understand what?",
+    "options": [
+      "Flow of transactions and related controls",
+      "Only tax rates",
+      "Only stock prices",
+      "Only HR benefits"
+    ],
+    "answer": 0,
+    "explanation": "Walkthroughs trace transactions through the system to understand processes and controls."
+  },
+  {
+    "id": "AUD-M-003",
+    "exam": "AUD",
+    "difficulty": "Medium",
+    "domain": "Sampling",
+    "question": "Sampling risk is the risk that what occurs?",
+    "options": [
+      "The sample conclusion differs from the population conclusion",
+      "The auditor works too quickly",
+      "Management signs a letter",
+      "The client changes logos"
+    ],
+    "answer": 0,
+    "explanation": "Sampling risk arises when a sample is not representative of the population."
+  },
+  {
+    "id": "AUD-M-004",
+    "exam": "AUD",
+    "difficulty": "Medium",
+    "domain": "Materiality",
+    "question": "Tolerable misstatement is used in which area?",
+    "options": [
+      "Audit sampling and substantive testing",
+      "Office decoration",
+      "Hiring decisions",
+      "Website coding"
+    ],
+    "answer": 0,
+    "explanation": "Tolerable misstatement is the maximum misstatement allowed in an account without causing material misstatement."
+  },
+  {
+    "id": "AUD-M-005",
+    "exam": "AUD",
+    "difficulty": "Medium",
+    "domain": "Revenue",
+    "question": "Which assertion is often a key risk for revenue overstatement?",
+    "options": [
+      "Occurrence",
+      "Completeness",
+      "Rights and obligations",
+      "Presentation only"
+    ],
+    "answer": 0,
+    "explanation": "Occurrence addresses whether recorded revenue transactions actually happened."
+  },
+  {
+    "id": "AUD-M-006",
+    "exam": "AUD",
+    "difficulty": "Medium",
+    "domain": "Expenses",
+    "question": "Which assertion is often a key risk for unrecorded liabilities?",
+    "options": [
+      "Completeness",
+      "Existence",
+      "Valuation only",
+      "Rights only"
+    ],
+    "answer": 0,
+    "explanation": "Completeness addresses whether all liabilities that should be recorded have been recorded."
+  },
+  {
+    "id": "AUD-M-007",
+    "exam": "AUD",
+    "difficulty": "Medium",
+    "domain": "Confirmations",
+    "question": "Negative confirmations are most appropriate when what is true?",
+    "options": [
+      "Risk is low and recipients are expected to respond if incorrect",
+      "Risk is high and balances are large",
+      "Controls are nonexistent",
+      "Recipients cannot read"
+    ],
+    "answer": 0,
+    "explanation": "Negative confirmations ask recipients to respond only if they disagree and are used in lower-risk circumstances."
+  },
+  {
+    "id": "AUD-M-008",
+    "exam": "AUD",
+    "difficulty": "Medium",
+    "domain": "Related Parties",
+    "question": "Why are related-party transactions risky?",
+    "options": [
+      "They may not be at arm’s length",
+      "They are always illegal",
+      "They are always immaterial",
+      "They cannot be disclosed"
+    ],
+    "answer": 0,
+    "explanation": "Related-party transactions can involve terms not available to independent parties and require careful disclosure."
+  },
+  {
+    "id": "AUD-M-009",
+    "exam": "AUD",
+    "difficulty": "Medium",
+    "domain": "Fraud",
+    "question": "Which condition is part of the fraud triangle?",
+    "options": [
+      "Pressure",
+      "Depreciation",
+      "Bank interest",
+      "Product warranty only"
+    ],
+    "answer": 0,
+    "explanation": "The fraud triangle includes pressure, opportunity, and rationalization."
+  },
+  {
+    "id": "AUD-M-010",
+    "exam": "AUD",
+    "difficulty": "Medium",
+    "domain": "Control Testing",
+    "question": "Testing controls is most useful when the auditor plans to do what?",
+    "options": [
+      "Rely on controls to reduce substantive testing",
+      "Avoid understanding the client",
+      "Skip documentation",
+      "Issue no opinion"
+    ],
+    "answer": 0,
+    "explanation": "If controls are effective, auditors may reduce certain substantive procedures."
+  },
+  {
+    "id": "AUD-M-011",
+    "exam": "AUD",
+    "difficulty": "Medium",
+    "domain": "Subsequent Events",
+    "question": "Subsequent events procedures cover what period?",
+    "options": [
+      "After balance sheet date through audit report date",
+      "Only five years before the audit",
+      "Only next fiscal year",
+      "Only tax filing date"
+    ],
+    "answer": 0,
+    "explanation": "Auditors perform subsequent events procedures through the audit report date."
+  },
+  {
+    "id": "AUD-M-012",
+    "exam": "AUD",
+    "difficulty": "Medium",
+    "domain": "Audit Evidence",
+    "question": "Which factor affects evidence reliability?",
+    "options": [
+      "Source and nature of evidence",
+      "Office size only",
+      "Company slogan",
+      "Website font"
+    ],
+    "answer": 0,
+    "explanation": "Evidence reliability depends on source, nature, and circumstances."
+  },
+  {
+    "id": "AUD-M-013",
+    "exam": "AUD",
+    "difficulty": "Medium",
+    "domain": "Estimates",
+    "question": "Auditing accounting estimates often requires evaluating what?",
+    "options": [
+      "Management assumptions and data",
+      "Only cash deposits",
+      "Only physical inventory",
+      "Only payroll approvals"
+    ],
+    "answer": 0,
+    "explanation": "Estimates depend on assumptions, methods, and data that auditors evaluate."
+  },
+  {
+    "id": "AUD-M-014",
+    "exam": "AUD",
+    "difficulty": "Medium",
+    "domain": "Audit Report",
+    "question": "A scope limitation may lead to which opinion?",
+    "options": [
+      "Qualified opinion or disclaimer",
+      "Always unmodified",
+      "Always adverse",
+      "No report ever"
+    ],
+    "answer": 0,
+    "explanation": "A material scope limitation can result in a qualified opinion or disclaimer depending on pervasiveness."
+  },
+  {
+    "id": "AUD-M-015",
+    "exam": "AUD",
+    "difficulty": "Medium",
+    "domain": "Group Audits",
+    "question": "A component auditor performs work on what?",
+    "options": [
+      "A component of group financial statements",
+      "Only individual tax returns",
+      "Only marketing systems",
+      "Only legal contracts"
+    ],
+    "answer": 0,
+    "explanation": "Component auditors work on financial information of components included in group financial statements."
+  },
+  {
+    "id": "AUD-D-001",
+    "exam": "AUD",
+    "difficulty": "Difficult",
+    "domain": "Audit Risk",
+    "question": "If inherent risk and control risk are high, acceptable detection risk should be what?",
+    "options": [
+      "Lower",
+      "Higher",
+      "Unchanged always",
+      "Ignored"
+    ],
+    "answer": 0,
+    "explanation": "Detection risk must be lower when risk of material misstatement is higher to keep audit risk acceptable."
+  },
+  {
+    "id": "AUD-D-002",
+    "exam": "AUD",
+    "difficulty": "Difficult",
+    "domain": "Revenue Fraud",
+    "question": "A client records sales before shipment. Which assertion is most affected?",
+    "options": [
+      "Occurrence and cutoff",
+      "Completeness only",
+      "Classification only",
+      "Rights only"
+    ],
+    "answer": 0,
+    "explanation": "Recording sales before shipment can mean the sale did not occur in the correct period."
+  },
+  {
+    "id": "AUD-D-003",
+    "exam": "AUD",
+    "difficulty": "Difficult",
+    "domain": "Going Concern",
+    "question": "If substantial doubt remains and disclosure is adequate, what should the auditor usually add?",
+    "options": [
+      "Emphasis-of-matter paragraph",
+      "Adverse opinion always",
+      "No opinion",
+      "Tax footnote"
+    ],
+    "answer": 0,
+    "explanation": "An emphasis-of-matter paragraph highlights going concern uncertainty when disclosures are adequate."
+  },
+  {
+    "id": "AUD-D-004",
+    "exam": "AUD",
+    "difficulty": "Difficult",
+    "domain": "Controls",
+    "question": "A control is designed well but not performed consistently. What is the issue?",
+    "options": [
+      "Operating effectiveness deficiency",
+      "Design is perfect and no issue exists",
+      "Only tax issue",
+      "Only disclosure issue"
+    ],
+    "answer": 0,
+    "explanation": "A control must be both suitably designed and operating effectively."
+  },
+  {
+    "id": "AUD-D-005",
+    "exam": "AUD",
+    "difficulty": "Difficult",
+    "domain": "Fraud",
+    "question": "Management override risk is addressed by procedures such as what?",
+    "options": [
+      "Testing journal entries and reviewing estimates for bias",
+      "Only asking management if fraud exists",
+      "Skipping unusual entries",
+      "Ignoring consolidation entries"
+    ],
+    "answer": 0,
+    "explanation": "Auditors respond to override risk by testing journal entries, estimates, and unusual transactions."
+  },
+  {
+    "id": "AUD-D-006",
+    "exam": "AUD",
+    "difficulty": "Difficult",
+    "domain": "Sampling",
+    "question": "In variables sampling, increasing expected misstatement generally does what to sample size?",
+    "options": [
+      "Increases sample size",
+      "Decreases sample size",
+      "Eliminates sampling risk",
+      "Has no possible effect"
+    ],
+    "answer": 0,
+    "explanation": "Higher expected misstatement typically requires a larger sample."
+  },
+  {
+    "id": "AUD-D-007",
+    "exam": "AUD",
+    "difficulty": "Difficult",
+    "domain": "Inventory",
+    "question": "Inventory held at a public warehouse should often be verified by what?",
+    "options": [
+      "Confirmation from the custodian",
+      "Only management inquiry",
+      "Ignoring warehouse records",
+      "Reviewing advertising"
+    ],
+    "answer": 0,
+    "explanation": "Confirmation from the external custodian provides evidence about inventory held off-site."
+  },
+  {
+    "id": "AUD-D-008",
+    "exam": "AUD",
+    "difficulty": "Difficult",
+    "domain": "Estimates",
+    "question": "Which condition increases estimation uncertainty?",
+    "options": [
+      "Complex model with sensitive assumptions",
+      "Simple fixed invoice",
+      "Cash received at bank",
+      "Standard payroll payment"
+    ],
+    "answer": 0,
+    "explanation": "Complex models and sensitive assumptions create greater estimation uncertainty."
+  },
+  {
+    "id": "AUD-D-009",
+    "exam": "AUD",
+    "difficulty": "Difficult",
+    "domain": "Subsequent Events",
+    "question": "A lawsuit settled after year-end confirms an obligation existing at year-end. What is likely required?",
+    "options": [
+      "Adjustment",
+      "No action ever",
+      "Only next-year disclosure",
+      "Delete the lawsuit"
+    ],
+    "answer": 0,
+    "explanation": "Recognized subsequent events provide evidence about conditions existing at the balance sheet date and may require adjustment."
+  },
+  {
+    "id": "AUD-D-010",
+    "exam": "AUD",
+    "difficulty": "Difficult",
+    "domain": "Audit Reports",
+    "question": "A material and pervasive GAAP departure usually results in what opinion?",
+    "options": [
+      "Adverse",
+      "Unmodified",
+      "Disclaimer due to scope",
+      "Review report"
+    ],
+    "answer": 0,
+    "explanation": "A material and pervasive departure from GAAP results in an adverse opinion."
+  },
+  {
+    "id": "AUD-D-011",
+    "exam": "AUD",
+    "difficulty": "Difficult",
+    "domain": "Component Auditors",
+    "question": "The group auditor must evaluate what?",
+    "options": [
+      "Component auditor competence and work",
+      "Only component office location",
+      "Only client website",
+      "Only tax schedules"
+    ],
+    "answer": 0,
+    "explanation": "The group auditor evaluates the component auditor’s competence, independence, and work performed."
+  },
+  {
+    "id": "AUD-D-012",
+    "exam": "AUD",
+    "difficulty": "Difficult",
+    "domain": "Internal Control Audit",
+    "question": "A material weakness in ICFR means what?",
+    "options": [
+      "A reasonable possibility that a material misstatement will not be prevented or detected timely",
+      "All transactions are wrong",
+      "No audit can be performed",
+      "The company must liquidate"
+    ],
+    "answer": 0,
+    "explanation": "A material weakness is a serious deficiency related to prevention or detection of material misstatement."
+  },
+  {
+    "id": "AUD-D-013",
+    "exam": "AUD",
+    "difficulty": "Difficult",
+    "domain": "Professional Skepticism",
+    "question": "Which behavior best demonstrates professional skepticism?",
+    "options": [
+      "Questioning contradictory evidence",
+      "Accepting all explanations without support",
+      "Ignoring unusual fluctuations",
+      "Letting management choose samples"
+    ],
+    "answer": 0,
+    "explanation": "Professional skepticism includes a questioning mind and critical assessment of evidence."
+  },
+  {
+    "id": "AUD-D-014",
+    "exam": "AUD",
+    "difficulty": "Difficult",
+    "domain": "Independence",
+    "question": "Which service most likely impairs independence for an audit client?",
+    "options": [
+      "Making management decisions",
+      "Reading public filings",
+      "Attending an industry seminar",
+      "Sending an invoice"
+    ],
+    "answer": 0,
+    "explanation": "Auditors cannot perform management functions for audit clients."
+  },
+  {
+    "id": "AUD-D-015",
+    "exam": "AUD",
+    "difficulty": "Difficult",
+    "domain": "Audit Documentation",
+    "question": "After the documentation completion date, changes to audit documentation should do what?",
+    "options": [
+      "Show when and why changes were made and by whom",
+      "Erase old evidence",
+      "Remove reviewer comments without record",
+      "Hide final conclusions"
+    ],
+    "answer": 0,
+    "explanation": "Changes after documentation completion must be documented transparently."
+  },
+    {
+    "id": "FAR-E-001",
+    "exam": "FAR",
+    "difficulty": "Easy",
+    "domain": "Financial Statements",
+    "question": "Which financial statement reports assets, liabilities, and equity?",
+    "options": [
+      "Balance sheet",
+      "Income statement",
+      "Statement of cash flows",
+      "Tax return"
+    ],
+    "answer": 0,
+    "explanation": "The balance sheet reports financial position: assets, liabilities, and equity."
+  },
+  {
+    "id": "FAR-E-002",
+    "exam": "FAR",
+    "difficulty": "Easy",
+    "domain": "Revenue",
+    "question": "Revenue is generally recognized when what occurs?",
+    "options": [
+      "Performance obligation is satisfied",
+      "Cash is always received first",
+      "Invoice paper is printed",
+      "Tax return is filed"
+    ],
+    "answer": 0,
+    "explanation": "Revenue is recognized when the entity satisfies a performance obligation."
+  },
+  {
+    "id": "FAR-E-003",
+    "exam": "FAR",
+    "difficulty": "Easy",
+    "domain": "Inventory",
+    "question": "Inventory is classified as what type of asset?",
+    "options": [
+      "Current asset",
+      "Long-term liability",
+      "Equity",
+      "Revenue"
+    ],
+    "answer": 0,
+    "explanation": "Inventory is usually expected to be sold within the operating cycle and is a current asset."
+  },
+  {
+    "id": "FAR-E-004",
+    "exam": "FAR",
+    "difficulty": "Easy",
+    "domain": "Depreciation",
+    "question": "Depreciation allocates the cost of what?",
+    "options": [
+      "Tangible long-lived assets",
+      "Inventory only",
+      "Cash",
+      "Accounts payable"
+    ],
+    "answer": 0,
+    "explanation": "Depreciation allocates the cost of tangible long-lived assets over useful life."
+  },
+  {
+    "id": "FAR-E-005",
+    "exam": "FAR",
+    "difficulty": "Easy",
+    "domain": "Liabilities",
+    "question": "Accounts payable is usually classified as what?",
+    "options": [
+      "Current liability",
+      "Equity",
+      "Operating revenue",
+      "Intangible asset"
+    ],
+    "answer": 0,
+    "explanation": "Accounts payable is generally expected to be paid within one year or operating cycle."
+  },
+  {
+    "id": "FAR-E-006",
+    "exam": "FAR",
+    "difficulty": "Easy",
+    "domain": "Equity",
+    "question": "Retained earnings generally represents what?",
+    "options": [
+      "Cumulative earnings not distributed as dividends",
+      "Only cash in bank",
+      "Total liabilities",
+      "Customer deposits"
+    ],
+    "answer": 0,
+    "explanation": "Retained earnings accumulates income less dividends."
+  },
+  {
+    "id": "FAR-E-007",
+    "exam": "FAR",
+    "difficulty": "Easy",
+    "domain": "Cash Flows",
+    "question": "Paying suppliers is usually which type of cash flow?",
+    "options": [
+      "Operating",
+      "Investing",
+      "Financing",
+      "Noncash only"
+    ],
+    "answer": 0,
+    "explanation": "Payments to suppliers are normally operating cash flows."
+  },
+  {
+    "id": "FAR-E-008",
+    "exam": "FAR",
+    "difficulty": "Easy",
+    "domain": "Accruals",
+    "question": "Accrued expenses are recorded when what happens?",
+    "options": [
+      "Expense incurred before cash paid",
+      "Cash paid before service received",
+      "Revenue never earned",
+      "Asset sold"
+    ],
+    "answer": 0,
+    "explanation": "Accrued expenses recognize expenses incurred but not yet paid."
+  },
+  {
+    "id": "FAR-E-009",
+    "exam": "FAR",
+    "difficulty": "Easy",
+    "domain": "Prepaids",
+    "question": "Prepaid insurance is initially recorded as what?",
+    "options": [
+      "Asset",
+      "Liability",
+      "Revenue",
+      "Loss"
+    ],
+    "answer": 0,
+    "explanation": "Prepaid insurance is an asset until coverage is used."
+  },
+  {
+    "id": "FAR-E-010",
+    "exam": "FAR",
+    "difficulty": "Easy",
+    "domain": "Bonds",
+    "question": "A bond issued at face amount means issue price equals what?",
+    "options": [
+      "Par value",
+      "Zero",
+      "Interest expense",
+      "Dividend amount"
+    ],
+    "answer": 0,
+    "explanation": "When issued at face amount, proceeds equal par value."
+  },
+  {
+    "id": "FAR-E-011",
+    "exam": "FAR",
+    "difficulty": "Easy",
+    "domain": "Intangibles",
+    "question": "A patent is generally what type of asset?",
+    "options": [
+      "Intangible asset",
+      "Inventory",
+      "Liability",
+      "Cash equivalent"
+    ],
+    "answer": 0,
+    "explanation": "A patent lacks physical substance and is an intangible asset."
+  },
+  {
+    "id": "FAR-E-012",
+    "exam": "FAR",
+    "difficulty": "Easy",
+    "domain": "Receivables",
+    "question": "Allowance for doubtful accounts reduces what?",
+    "options": [
+      "Accounts receivable",
+      "Sales tax payable",
+      "Inventory",
+      "Common stock"
+    ],
+    "answer": 0,
+    "explanation": "The allowance is a contra-asset reducing net accounts receivable."
+  },
+  {
+    "id": "FAR-E-013",
+    "exam": "FAR",
+    "difficulty": "Easy",
+    "domain": "Leases",
+    "question": "A lessee records lease liabilities for what?",
+    "options": [
+      "Obligations to make lease payments",
+      "Only cash sales",
+      "Inventory shrinkage",
+      "Tax credits"
+    ],
+    "answer": 0,
+    "explanation": "A lease liability reflects the obligation to make lease payments."
+  },
+  {
+    "id": "FAR-E-014",
+    "exam": "FAR",
+    "difficulty": "Easy",
+    "domain": "EPS",
+    "question": "Basic EPS uses income available to whom?",
+    "options": [
+      "Common shareholders",
+      "Only creditors",
+      "Only employees",
+      "Only tax authorities"
+    ],
+    "answer": 0,
+    "explanation": "Basic EPS measures earnings available to common shareholders per weighted-average common share."
+  },
+  {
+    "id": "FAR-E-015",
+    "exam": "FAR",
+    "difficulty": "Easy",
+    "domain": "Adjusting Entries",
+    "question": "Adjusting entries are made to do what?",
+    "options": [
+      "Update accounts before financial statements",
+      "Close the bank account",
+      "Approve payroll",
+      "Eliminate audits"
+    ],
+    "answer": 0,
+    "explanation": "Adjusting entries update accounts for accruals, deferrals, and estimates."
+  },
+  {
+    "id": "FAR-M-001",
+    "exam": "FAR",
+    "difficulty": "Medium",
+    "domain": "Revenue",
+    "question": "Under ASC 606, what is the first step in revenue recognition?",
+    "options": [
+      "Identify the contract with the customer",
+      "Recognize all cash immediately",
+      "Record dividends",
+      "Close retained earnings"
+    ],
+    "answer": 0,
+    "explanation": "The first step is identifying the contract with the customer."
+  },
+  {
+    "id": "FAR-M-002",
+    "exam": "FAR",
+    "difficulty": "Medium",
+    "domain": "Inventory",
+    "question": "Under lower of cost and net realizable value, inventory is written down when what occurs?",
+    "options": [
+      "NRV is below cost",
+      "Cost is below NRV",
+      "Sales increase",
+      "Cash increases"
+    ],
+    "answer": 0,
+    "explanation": "Inventory is measured at the lower of cost and net realizable value."
+  },
+  {
+    "id": "FAR-M-003",
+    "exam": "FAR",
+    "difficulty": "Medium",
+    "domain": "Bonds",
+    "question": "If stated rate is below market rate, bonds are issued at what?",
+    "options": [
+      "Discount",
+      "Premium",
+      "Par always",
+      "Zero interest"
+    ],
+    "answer": 0,
+    "explanation": "Investors pay less than face value when stated interest is below market."
+  },
+  {
+    "id": "FAR-M-004",
+    "exam": "FAR",
+    "difficulty": "Medium",
+    "domain": "Depreciation",
+    "question": "Double-declining-balance depreciation is what type of method?",
+    "options": [
+      "Accelerated",
+      "Straight-line",
+      "Units-only",
+      "No depreciation"
+    ],
+    "answer": 0,
+    "explanation": "DDB records more depreciation in earlier years."
+  },
+  {
+    "id": "FAR-M-005",
+    "exam": "FAR",
+    "difficulty": "Medium",
+    "domain": "Leases",
+    "question": "A finance lease for a lessee generally results in what?",
+    "options": [
+      "Right-of-use asset and lease liability",
+      "Only rent expense with no liability",
+      "Only revenue",
+      "No balance sheet effect"
+    ],
+    "answer": 0,
+    "explanation": "Finance leases are recognized with ROU assets and lease liabilities."
+  },
+  {
+    "id": "FAR-M-006",
+    "exam": "FAR",
+    "difficulty": "Medium",
+    "domain": "Cash Flows",
+    "question": "Purchasing equipment for cash is what type of cash flow?",
+    "options": [
+      "Investing",
+      "Operating",
+      "Financing",
+      "No cash flow"
+    ],
+    "answer": 0,
+    "explanation": "Purchases of long-lived assets are investing activities."
+  },
+  {
+    "id": "FAR-M-007",
+    "exam": "FAR",
+    "difficulty": "Medium",
+    "domain": "Receivables",
+    "question": "Bad debt expense under the allowance method is based on what?",
+    "options": [
+      "Estimated uncollectible accounts",
+      "Only accounts paid in cash",
+      "Only tax rates",
+      "Dividend declarations"
+    ],
+    "answer": 0,
+    "explanation": "The allowance method estimates uncollectible accounts and records bad debt expense."
+  },
+  {
+    "id": "FAR-M-008",
+    "exam": "FAR",
+    "difficulty": "Medium",
+    "domain": "Contingencies",
+    "question": "A probable and reasonably estimable loss contingency should be what?",
+    "options": [
+      "Accrued",
+      "Ignored",
+      "Recorded as revenue",
+      "Only shown in equity"
+    ],
+    "answer": 0,
+    "explanation": "Probable and reasonably estimable losses are accrued."
+  },
+  {
+    "id": "FAR-M-009",
+    "exam": "FAR",
+    "difficulty": "Medium",
+    "domain": "Equity",
+    "question": "Treasury stock is what?",
+    "options": [
+      "A contra-equity account",
+      "An asset",
+      "A liability",
+      "Revenue"
+    ],
+    "answer": 0,
+    "explanation": "Treasury stock reduces total shareholders' equity."
+  },
+  {
+    "id": "FAR-M-010",
+    "exam": "FAR",
+    "difficulty": "Medium",
+    "domain": "Consolidation",
+    "question": "Consolidated financial statements are prepared when one company does what?",
+    "options": [
+      "Controls another entity",
+      "Only buys inventory",
+      "Files taxes",
+      "Pays rent"
+    ],
+    "answer": 0,
+    "explanation": "Consolidation is required when a parent controls a subsidiary."
+  },
+  {
+    "id": "FAR-M-011",
+    "exam": "FAR",
+    "difficulty": "Medium",
+    "domain": "Income Taxes",
+    "question": "Deferred tax liabilities arise when what happens?",
+    "options": [
+      "Taxable income will be higher in future due to temporary differences",
+      "All taxes are paid",
+      "No temporary differences exist",
+      "Book income equals tax income forever"
+    ],
+    "answer": 0,
+    "explanation": "Deferred tax liabilities represent future taxable amounts from temporary differences."
+  },
+  {
+    "id": "FAR-M-012",
+    "exam": "FAR",
+    "difficulty": "Medium",
+    "domain": "Pensions",
+    "question": "Projected benefit obligation relates to what?",
+    "options": [
+      "Defined benefit pension plans",
+      "Inventory valuation",
+      "Sales returns",
+      "Bank reconciliations"
+    ],
+    "answer": 0,
+    "explanation": "PBO measures pension obligations based on projected future compensation levels."
+  },
+  {
+    "id": "FAR-M-013",
+    "exam": "FAR",
+    "difficulty": "Medium",
+    "domain": "EPS",
+    "question": "Diluted EPS includes what?",
+    "options": [
+      "Potential common shares if dilutive",
+      "Only preferred dividends",
+      "Only bonds payable",
+      "Only cash"
+    ],
+    "answer": 0,
+    "explanation": "Diluted EPS includes dilutive potential common shares."
+  },
+  {
+    "id": "FAR-M-014",
+    "exam": "FAR",
+    "difficulty": "Medium",
+    "domain": "Impairment",
+    "question": "An asset impairment occurs when what?",
+    "options": [
+      "Carrying amount is not recoverable and exceeds fair value",
+      "Cash increases",
+      "Inventory sells out",
+      "Revenue is earned"
+    ],
+    "answer": 0,
+    "explanation": "Impairment recognizes a loss when carrying amount is not recoverable and exceeds fair value."
+  },
+  {
+    "id": "FAR-M-015",
+    "exam": "FAR",
+    "difficulty": "Medium",
+    "domain": "Accounting Changes",
+    "question": "A change in estimate is generally accounted for how?",
+    "options": [
+      "Prospectively",
+      "Retrospectively always",
+      "As an error always",
+      "Never recorded"
+    ],
+    "answer": 0,
+    "explanation": "Changes in estimates are generally accounted for prospectively."
+  },
+  {
+    "id": "FAR-D-001",
+    "exam": "FAR",
+    "difficulty": "Difficult",
+    "domain": "Revenue",
+    "question": "A contract has multiple performance obligations. Revenue should be allocated based on what?",
+    "options": [
+      "Relative standalone selling prices",
+      "Only cash received",
+      "Equal amounts always",
+      "Tax basis only"
+    ],
+    "answer": 0,
+    "explanation": "Transaction price is allocated based on relative standalone selling prices."
+  },
+  {
+    "id": "FAR-D-002",
+    "exam": "FAR",
+    "difficulty": "Difficult",
+    "domain": "Leases",
+    "question": "Which condition indicates finance lease classification for a lessee?",
+    "options": [
+      "Lease term is for major part of asset's remaining economic life",
+      "Rent is paid monthly",
+      "Asset is small",
+      "Lessor has many employees"
+    ],
+    "answer": 0,
+    "explanation": "A major part of the remaining economic life is a finance lease criterion."
+  },
+  {
+    "id": "FAR-D-003",
+    "exam": "FAR",
+    "difficulty": "Difficult",
+    "domain": "Bonds",
+    "question": "Using effective interest method, interest expense equals what?",
+    "options": [
+      "Carrying value times market rate at issuance",
+      "Face value times coupon rate only",
+      "Cash paid only",
+      "Premium divided by years only"
+    ],
+    "answer": 0,
+    "explanation": "Effective interest expense equals carrying amount times the effective market rate."
+  },
+  {
+    "id": "FAR-D-004",
+    "exam": "FAR",
+    "difficulty": "Difficult",
+    "domain": "Consolidation",
+    "question": "In consolidation, intercompany sales should be what?",
+    "options": [
+      "Eliminated",
+      "Doubled",
+      "Recognized as outside sales",
+      "Reported as tax expense"
+    ],
+    "answer": 0,
+    "explanation": "Intercompany transactions are eliminated in consolidation."
+  },
+  {
+    "id": "FAR-D-005",
+    "exam": "FAR",
+    "difficulty": "Difficult",
+    "domain": "Deferred Taxes",
+    "question": "A temporary difference that creates future deductible amounts results in what?",
+    "options": [
+      "Deferred tax asset",
+      "Deferred tax liability",
+      "Permanent difference only",
+      "No accounting"
+    ],
+    "answer": 0,
+    "explanation": "Future deductible amounts create deferred tax assets."
+  },
+  {
+    "id": "FAR-D-006",
+    "exam": "FAR",
+    "difficulty": "Difficult",
+    "domain": "Inventory",
+    "question": "A company using LIFO during rising prices will usually report what compared with FIFO?",
+    "options": [
+      "Lower ending inventory and lower taxable income",
+      "Higher ending inventory and higher taxable income",
+      "No difference ever",
+      "No cost of goods sold"
+    ],
+    "answer": 0,
+    "explanation": "In rising prices, LIFO assigns recent higher costs to COGS, reducing income and ending inventory."
+  },
+  {
+    "id": "FAR-D-007",
+    "exam": "FAR",
+    "difficulty": "Difficult",
+    "domain": "Impairment",
+    "question": "For held-and-used long-lived assets, what is tested first?",
+    "options": [
+      "Recoverability using undiscounted cash flows",
+      "Tax basis",
+      "Replacement cost only",
+      "Dividend yield"
+    ],
+    "answer": 0,
+    "explanation": "The recoverability test compares carrying amount with undiscounted expected cash flows."
+  },
+  {
+    "id": "FAR-D-008",
+    "exam": "FAR",
+    "difficulty": "Difficult",
+    "domain": "Pensions",
+    "question": "Actuarial gains and losses are commonly reported initially in what?",
+    "options": [
+      "Other comprehensive income",
+      "Sales revenue",
+      "Accounts payable",
+      "Inventory"
+    ],
+    "answer": 0,
+    "explanation": "Certain pension gains and losses are reported in OCI before amortization."
+  },
+  {
+    "id": "FAR-D-009",
+    "exam": "FAR",
+    "difficulty": "Difficult",
+    "domain": "Statement of Cash Flows",
+    "question": "Under indirect method, net income is adjusted for what?",
+    "options": [
+      "Noncash items and working capital changes",
+      "Only dividends declared",
+      "Only stock price changes",
+      "Only tax penalties"
+    ],
+    "answer": 0,
+    "explanation": "The indirect method reconciles net income to operating cash flow using noncash and working capital adjustments."
+  },
+  {
+    "id": "FAR-D-010",
+    "exam": "FAR",
+    "difficulty": "Difficult",
+    "domain": "EPS",
+    "question": "Convertible bonds are included in diluted EPS using which method?",
+    "options": [
+      "If-converted method",
+      "Treasury stock method",
+      "Straight-line method",
+      "Retail inventory method"
+    ],
+    "answer": 0,
+    "explanation": "The if-converted method assumes conversion at the beginning of the period if dilutive."
+  },
+  {
+    "id": "FAR-D-011",
+    "exam": "FAR",
+    "difficulty": "Difficult",
+    "domain": "Foreign Currency",
+    "question": "Translation adjustments for a foreign subsidiary often go where?",
+    "options": [
+      "Other comprehensive income",
+      "Sales revenue",
+      "Interest expense",
+      "Accounts payable"
+    ],
+    "answer": 0,
+    "explanation": "Foreign currency translation adjustments are commonly reported in OCI."
+  },
+  {
+    "id": "FAR-D-012",
+    "exam": "FAR",
+    "difficulty": "Difficult",
+    "domain": "Nonmonetary Exchanges",
+    "question": "Commercial substance affects what?",
+    "options": [
+      "Gain recognition",
+      "Payroll tax rate",
+      "Audit sampling",
+      "Dividend dates"
+    ],
+    "answer": 0,
+    "explanation": "Commercial substance affects how gains are recognized in nonmonetary exchanges."
+  },
+  {
+    "id": "FAR-D-013",
+    "exam": "FAR",
+    "difficulty": "Difficult",
+    "domain": "Governmental Accounting",
+    "question": "Governmental funds generally use which measurement focus?",
+    "options": [
+      "Current financial resources",
+      "Economic resources only",
+      "Tax basis only",
+      "Cash-only always"
+    ],
+    "answer": 0,
+    "explanation": "Governmental funds use current financial resources measurement focus and modified accrual accounting."
+  },
+  {
+    "id": "FAR-D-014",
+    "exam": "FAR",
+    "difficulty": "Difficult",
+    "domain": "Error Correction",
+    "question": "A material prior-period error is generally reported how?",
+    "options": [
+      "Prior-period adjustment",
+      "Prospective estimate change",
+      "Current revenue",
+      "No disclosure"
+    ],
+    "answer": 0,
+    "explanation": "Material prior-period errors are corrected by restating prior periods or recording a prior-period adjustment."
+  },
+  {
+    "id": "FAR-D-015",
+    "exam": "FAR",
+    "difficulty": "Difficult",
+    "domain": "Fair Value",
+    "question": "Level 1 fair value inputs are what?",
+    "options": [
+      "Quoted prices in active markets for identical assets or liabilities",
+      "Management guesses",
+      "Unobservable internal estimates only",
+      "Tax depreciation schedules"
+    ],
+    "answer": 0,
+    "explanation": "Level 1 inputs are the most observable: quoted prices in active markets."
+  },
+    {
+    "id": "REG-E-001",
+    "exam": "REG",
+    "difficulty": "Easy",
+    "domain": "Individual Tax",
+    "question": "Which form is commonly used by individuals to file federal income tax?",
+    "options": [
+      "Form 1040",
+      "Form 10-K",
+      "Form W-3 only",
+      "Form 8-K"
+    ],
+    "answer": 0,
+    "explanation": "Individuals commonly file federal income tax using Form 1040."
+  },
+  {
+    "id": "REG-E-002",
+    "exam": "REG",
+    "difficulty": "Easy",
+    "domain": "Gross Income",
+    "question": "Wages are generally what for tax purposes?",
+    "options": [
+      "Taxable income unless excluded",
+      "Always excluded",
+      "A tax credit",
+      "A capital loss"
+    ],
+    "answer": 0,
+    "explanation": "Wages are generally included in gross income unless a specific exclusion applies."
+  },
+  {
+    "id": "REG-E-003",
+    "exam": "REG",
+    "difficulty": "Easy",
+    "domain": "Deductions",
+    "question": "A deduction generally does what?",
+    "options": [
+      "Reduces taxable income",
+      "Increases gross income",
+      "Eliminates filing requirements",
+      "Creates revenue"
+    ],
+    "answer": 0,
+    "explanation": "Deductions reduce taxable income."
+  },
+  {
+    "id": "REG-E-004",
+    "exam": "REG",
+    "difficulty": "Easy",
+    "domain": "Credits",
+    "question": "A tax credit generally does what?",
+    "options": [
+      "Reduces tax liability",
+      "Increases taxable wages",
+      "Creates inventory",
+      "Replaces gross income"
+    ],
+    "answer": 0,
+    "explanation": "Tax credits reduce tax liability, often dollar-for-dollar."
+  },
+  {
+    "id": "REG-E-005",
+    "exam": "REG",
+    "difficulty": "Easy",
+    "domain": "Filing Status",
+    "question": "Which is a common individual filing status?",
+    "options": [
+      "Single",
+      "Subsidiary",
+      "Partnership asset",
+      "Bondholder"
+    ],
+    "answer": 0,
+    "explanation": "Single is one of the common individual filing statuses."
+  },
+  {
+    "id": "REG-E-006",
+    "exam": "REG",
+    "difficulty": "Easy",
+    "domain": "Basis",
+    "question": "Basis is important because it helps calculate what?",
+    "options": [
+      "Gain or loss on disposition",
+      "Only employee rank",
+      "Only sales revenue",
+      "Only audit risk"
+    ],
+    "answer": 0,
+    "explanation": "Gain or loss generally depends on amount realized minus adjusted basis."
+  },
+  {
+    "id": "REG-E-007",
+    "exam": "REG",
+    "difficulty": "Easy",
+    "domain": "Capital Gains",
+    "question": "A capital asset held more than one year is generally what?",
+    "options": [
+      "Long-term",
+      "Short-term",
+      "Ordinary income always",
+      "Tax-free always"
+    ],
+    "answer": 0,
+    "explanation": "Assets held more than one year generally produce long-term capital gain or loss."
+  },
+  {
+    "id": "REG-E-008",
+    "exam": "REG",
+    "difficulty": "Easy",
+    "domain": "Business Law",
+    "question": "A contract generally requires what?",
+    "options": [
+      "Offer, acceptance, and consideration",
+      "Only a logo",
+      "Only a tax form",
+      "Only inventory"
+    ],
+    "answer": 0,
+    "explanation": "A valid contract generally requires offer, acceptance, consideration, and legal capacity/purpose."
+  },
+  {
+    "id": "REG-E-009",
+    "exam": "REG",
+    "difficulty": "Easy",
+    "domain": "Agency",
+    "question": "An agent acts on behalf of whom?",
+    "options": [
+      "Principal",
+      "Creditor only",
+      "Shareholder only",
+      "Competitor"
+    ],
+    "answer": 0,
+    "explanation": "An agent is authorized to act on behalf of a principal."
+  },
+  {
+    "id": "REG-E-010",
+    "exam": "REG",
+    "difficulty": "Easy",
+    "domain": "Property Tax",
+    "question": "Depreciation is usually associated with what?",
+    "options": [
+      "Business or income-producing property",
+      "Personal meals only",
+      "Tax credits only",
+      "Bank deposits only"
+    ],
+    "answer": 0,
+    "explanation": "Depreciation applies to qualifying business or income-producing property."
+  },
+  {
+    "id": "REG-E-011",
+    "exam": "REG",
+    "difficulty": "Easy",
+    "domain": "Partnerships",
+    "question": "Partnership income is generally taxed how?",
+    "options": [
+      "Passed through to partners",
+      "Never taxed",
+      "Only taxed as wages",
+      "Always tax exempt"
+    ],
+    "answer": 0,
+    "explanation": "Partnerships are pass-through entities; items flow to partners."
+  },
+  {
+    "id": "REG-E-012",
+    "exam": "REG",
+    "difficulty": "Easy",
+    "domain": "Corporations",
+    "question": "C corporations are generally subject to what?",
+    "options": [
+      "Entity-level income tax",
+      "No tax ever",
+      "Only partner-level tax",
+      "Only payroll tax"
+    ],
+    "answer": 0,
+    "explanation": "C corporations pay income tax at the corporate level."
+  },
+  {
+    "id": "REG-E-013",
+    "exam": "REG",
+    "difficulty": "Easy",
+    "domain": "Ethics",
+    "question": "Tax preparers should not do what?",
+    "options": [
+      "Take unreasonable positions",
+      "Keep records",
+      "Ask for documents",
+      "Follow standards"
+    ],
+    "answer": 0,
+    "explanation": "Tax professionals must follow standards and avoid unreasonable positions."
+  },
+  {
+    "id": "REG-E-014",
+    "exam": "REG",
+    "difficulty": "Easy",
+    "domain": "Sales Tax",
+    "question": "Sales tax is generally imposed on what?",
+    "options": [
+      "Taxable sales of goods or services",
+      "Only federal wages",
+      "Only depreciation",
+      "Only audit reports"
+    ],
+    "answer": 0,
+    "explanation": "Sales tax generally applies to taxable sales depending on state law."
+  },
+  {
+    "id": "REG-E-015",
+    "exam": "REG",
+    "difficulty": "Easy",
+    "domain": "Gifts",
+    "question": "A gift tax is generally imposed on whom?",
+    "options": [
+      "Donor",
+      "Donee always",
+      "Employer always",
+      "Auditor"
+    ],
+    "answer": 0,
+    "explanation": "Gift tax is generally imposed on the donor."
+  },
+  {
+    "id": "REG-M-001",
+    "exam": "REG",
+    "difficulty": "Medium",
+    "domain": "Individual Tax",
+    "question": "Adjusted gross income is calculated before what?",
+    "options": [
+      "Itemized or standard deduction",
+      "Gross income",
+      "Wages",
+      "Interest income"
+    ],
+    "answer": 0,
+    "explanation": "AGI is calculated before subtracting standard or itemized deductions."
+  },
+  {
+    "id": "REG-M-002",
+    "exam": "REG",
+    "difficulty": "Medium",
+    "domain": "Capital Losses",
+    "question": "For individuals, net capital losses are subject to what?",
+    "options": [
+      "Annual deduction limitation",
+      "Unlimited ordinary deduction",
+      "No carryforward",
+      "Always tax exempt"
+    ],
+    "answer": 0,
+    "explanation": "Individuals may deduct capital losses only up to annual limits, with carryforwards."
+  },
+  {
+    "id": "REG-M-003",
+    "exam": "REG",
+    "difficulty": "Medium",
+    "domain": "Basis",
+    "question": "A partner’s basis is generally increased by what?",
+    "options": [
+      "Share of partnership income",
+      "Distributions only",
+      "Nondeductible personal meals",
+      "Capital losses only"
+    ],
+    "answer": 0,
+    "explanation": "Partnership income increases a partner's outside basis."
+  },
+  {
+    "id": "REG-M-004",
+    "exam": "REG",
+    "difficulty": "Medium",
+    "domain": "S Corporations",
+    "question": "An S corporation shareholder’s stock basis is increased by what?",
+    "options": [
+      "Share of income",
+      "Nondeductible penalties only",
+      "Distributions only",
+      "Personal expenses"
+    ],
+    "answer": 0,
+    "explanation": "S corporation income increases shareholder stock basis."
+  },
+  {
+    "id": "REG-M-005",
+    "exam": "REG",
+    "difficulty": "Medium",
+    "domain": "Property Transactions",
+    "question": "Realized gain equals what?",
+    "options": [
+      "Amount realized minus adjusted basis",
+      "Adjusted basis minus depreciation only",
+      "Gross wages minus deductions",
+      "Tax credits minus tax"
+    ],
+    "answer": 0,
+    "explanation": "Realized gain is amount realized less adjusted basis."
+  },
+  {
+    "id": "REG-M-006",
+    "exam": "REG",
+    "difficulty": "Medium",
+    "domain": "Like-Kind Exchange",
+    "question": "Like-kind exchange treatment generally applies to what?",
+    "options": [
+      "Real property held for business or investment",
+      "Personal-use cars",
+      "Inventory",
+      "Services"
+    ],
+    "answer": 0,
+    "explanation": "Like-kind exchange rules generally apply to qualifying real property held for business or investment."
+  },
+  {
+    "id": "REG-M-007",
+    "exam": "REG",
+    "difficulty": "Medium",
+    "domain": "Corporate Tax",
+    "question": "Dividends received by shareholders are generally what?",
+    "options": [
+      "Taxable income",
+      "Always tax-free",
+      "A deduction to shareholder",
+      "A liability only"
+    ],
+    "answer": 0,
+    "explanation": "Dividends are generally taxable to shareholders unless special rules apply."
+  },
+  {
+    "id": "REG-M-008",
+    "exam": "REG",
+    "difficulty": "Medium",
+    "domain": "Book-Tax Differences",
+    "question": "Municipal bond interest is commonly what type of difference?",
+    "options": [
+      "Permanent difference",
+      "Temporary difference",
+      "Depreciation method",
+      "Capital loss"
+    ],
+    "answer": 0,
+    "explanation": "Tax-exempt municipal interest is a permanent difference."
+  },
+  {
+    "id": "REG-M-009",
+    "exam": "REG",
+    "difficulty": "Medium",
+    "domain": "Business Law",
+    "question": "Apparent authority arises when what happens?",
+    "options": [
+      "Principal leads third party to believe agent has authority",
+      "Agent secretly acts alone",
+      "Contract is never formed",
+      "Taxes are unpaid"
+    ],
+    "answer": 0,
+    "explanation": "Apparent authority is based on the principal’s representations to a third party."
+  },
+  {
+    "id": "REG-M-010",
+    "exam": "REG",
+    "difficulty": "Medium",
+    "domain": "Secured Transactions",
+    "question": "Perfection of a security interest often does what?",
+    "options": [
+      "Protects priority against other creditors",
+      "Eliminates debt",
+      "Creates wages",
+      "Files tax return"
+    ],
+    "answer": 0,
+    "explanation": "Perfection helps establish priority in collateral against third parties."
+  },
+  {
+    "id": "REG-M-011",
+    "exam": "REG",
+    "difficulty": "Medium",
+    "domain": "Bankruptcy",
+    "question": "A secured creditor has an interest in what?",
+    "options": [
+      "Collateral",
+      "Only wages",
+      "Only tax credits",
+      "Only dividends"
+    ],
+    "answer": 0,
+    "explanation": "A secured creditor has a security interest in collateral."
+  },
+  {
+    "id": "REG-M-012",
+    "exam": "REG",
+    "difficulty": "Medium",
+    "domain": "Tax Research",
+    "question": "Which source is primary authority?",
+    "options": [
+      "Internal Revenue Code",
+      "Commercial tax blog",
+      "Class notes only",
+      "News article"
+    ],
+    "answer": 0,
+    "explanation": "The Internal Revenue Code is primary tax authority."
+  },
+  {
+    "id": "REG-M-013",
+    "exam": "REG",
+    "difficulty": "Medium",
+    "domain": "Ethics",
+    "question": "A CPA discovers an error in a prior tax return. What should the CPA generally do?",
+    "options": [
+      "Advise the client promptly",
+      "Ignore it",
+      "Guarantee no penalty",
+      "Destroy records"
+    ],
+    "answer": 0,
+    "explanation": "A CPA should advise the client of the error and potential consequences."
+  },
+  {
+    "id": "REG-M-014",
+    "exam": "REG",
+    "difficulty": "Medium",
+    "domain": "Depreciation",
+    "question": "MACRS is used for what?",
+    "options": [
+      "Tax depreciation",
+      "Audit sampling",
+      "Financial statement consolidation",
+      "Contract acceptance"
+    ],
+    "answer": 0,
+    "explanation": "MACRS is the tax depreciation system for many assets."
+  },
+  {
+    "id": "REG-M-015",
+    "exam": "REG",
+    "difficulty": "Medium",
+    "domain": "Nexus",
+    "question": "State tax nexus concerns what?",
+    "options": [
+      "Whether a state has sufficient connection to tax a business",
+      "Federal audit opinion",
+      "Bank reconciliation",
+      "Inventory costing only"
+    ],
+    "answer": 0,
+    "explanation": "Nexus determines whether a state can impose tax obligations on a business."
+  },
+  {
+    "id": "REG-D-001",
+    "exam": "REG",
+    "difficulty": "Difficult",
+    "domain": "Partnership Tax",
+    "question": "A partner’s outside basis is decreased by what?",
+    "options": [
+      "Distributions",
+      "Share of income",
+      "Additional contributions",
+      "Tax-exempt income"
+    ],
+    "answer": 0,
+    "explanation": "Distributions generally reduce a partner's outside basis."
+  },
+  {
+    "id": "REG-D-002",
+    "exam": "REG",
+    "difficulty": "Difficult",
+    "domain": "S Corporations",
+    "question": "A shareholder can deduct S corporation losses only to the extent of what?",
+    "options": [
+      "Basis and at-risk/passive activity limits",
+      "Gross sales only",
+      "Corporate earnings and profits only",
+      "Federal withholding"
+    ],
+    "answer": 0,
+    "explanation": "Loss deductions are limited by stock/debt basis and other limitation rules."
+  },
+  {
+    "id": "REG-D-003",
+    "exam": "REG",
+    "difficulty": "Difficult",
+    "domain": "C Corporations",
+    "question": "Double taxation refers to what?",
+    "options": [
+      "Corporate income taxed at entity level and dividends taxed to shareholders",
+      "Two payroll checks",
+      "Two audit opinions",
+      "Two bank accounts"
+    ],
+    "answer": 0,
+    "explanation": "C corporation income can be taxed once to the corporation and again as dividends to shareholders."
+  },
+  {
+    "id": "REG-D-004",
+    "exam": "REG",
+    "difficulty": "Difficult",
+    "domain": "Property",
+    "question": "Boot received in a like-kind exchange can trigger what?",
+    "options": [
+      "Recognized gain",
+      "Recognized loss always",
+      "No tax effect ever",
+      "Payroll tax only"
+    ],
+    "answer": 0,
+    "explanation": "Boot received can cause realized gain to be recognized up to the boot amount."
+  },
+  {
+    "id": "REG-D-005",
+    "exam": "REG",
+    "difficulty": "Difficult",
+    "domain": "Individual Tax",
+    "question": "A deduction from AGI is also known as what?",
+    "options": [
+      "Itemized deduction or standard deduction",
+      "Business gross income",
+      "Tax credit",
+      "Self-employment tax"
+    ],
+    "answer": 0,
+    "explanation": "Deductions from AGI include itemized deductions and the standard deduction."
+  },
+  {
+    "id": "REG-D-006",
+    "exam": "REG",
+    "difficulty": "Difficult",
+    "domain": "Passive Activity",
+    "question": "Passive activity losses are generally limited to what?",
+    "options": [
+      "Passive activity income",
+      "Wage income without limit",
+      "Tax-exempt interest",
+      "Dividend income only"
+    ],
+    "answer": 0,
+    "explanation": "Passive losses generally offset passive income, subject to exceptions."
+  },
+  {
+    "id": "REG-D-007",
+    "exam": "REG",
+    "difficulty": "Difficult",
+    "domain": "Corporate Formation",
+    "question": "Under Section 351, gain recognition may be deferred when property is transferred for stock and transferors have what?",
+    "options": [
+      "Control immediately after exchange",
+      "No ownership",
+      "Only debt",
+      "No business purpose"
+    ],
+    "answer": 0,
+    "explanation": "Section 351 generally requires control immediately after the exchange."
+  },
+  {
+    "id": "REG-D-008",
+    "exam": "REG",
+    "difficulty": "Difficult",
+    "domain": "Tax Penalties",
+    "question": "Accuracy-related penalties may apply to what?",
+    "options": [
+      "Substantial understatement or negligence",
+      "Correctly filed returns only",
+      "Tax-exempt income only",
+      "Proper documentation"
+    ],
+    "answer": 0,
+    "explanation": "Accuracy-related penalties can apply to negligence or substantial understatement."
+  },
+  {
+    "id": "REG-D-009",
+    "exam": "REG",
+    "difficulty": "Difficult",
+    "domain": "Business Law",
+    "question": "A voidable contract is one that what?",
+    "options": [
+      "One party may choose to avoid",
+      "Never existed for any purpose",
+      "Is always illegal",
+      "Requires no parties"
+    ],
+    "answer": 0,
+    "explanation": "A voidable contract is valid unless the protected party avoids it."
+  },
+  {
+    "id": "REG-D-010",
+    "exam": "REG",
+    "difficulty": "Difficult",
+    "domain": "Agency",
+    "question": "A principal may be liable for an agent’s act when the agent acts within what?",
+    "options": [
+      "Scope of authority",
+      "Personal vacation",
+      "Unrelated criminal act always",
+      "No relationship"
+    ],
+    "answer": 0,
+    "explanation": "Principals can be liable for authorized acts of their agents."
+  },
+  {
+    "id": "REG-D-011",
+    "exam": "REG",
+    "difficulty": "Difficult",
+    "domain": "Bankruptcy",
+    "question": "Which creditor generally has priority in specific collateral?",
+    "options": [
+      "Perfected secured creditor",
+      "Unsecured creditor always",
+      "Shareholder",
+      "Customer only"
+    ],
+    "answer": 0,
+    "explanation": "Perfected secured creditors often have priority in the collateral."
+  },
+  {
+    "id": "REG-D-012",
+    "exam": "REG",
+    "difficulty": "Difficult",
+    "domain": "Circular 230",
+    "question": "Circular 230 governs practice before which agency?",
+    "options": [
+      "IRS",
+      "SEC only",
+      "FASB",
+      "PCAOB only"
+    ],
+    "answer": 0,
+    "explanation": "Circular 230 governs practice before the Internal Revenue Service."
+  },
+  {
+    "id": "REG-D-013",
+    "exam": "REG",
+    "difficulty": "Difficult",
+    "domain": "Trusts and Estates",
+    "question": "Estate tax is based primarily on what?",
+    "options": [
+      "Transfer of wealth at death",
+      "Monthly wages",
+      "Sales tax",
+      "Inventory cost"
+    ],
+    "answer": 0,
+    "explanation": "Estate tax applies to transfers of wealth at death, subject to exemptions and deductions."
+  },
+  {
+    "id": "REG-D-014",
+    "exam": "REG",
+    "difficulty": "Difficult",
+    "domain": "AMT",
+    "question": "Alternative minimum tax is designed to do what?",
+    "options": [
+      "Ensure taxpayers with certain preferences pay minimum tax",
+      "Replace all payroll tax",
+      "Eliminate deductions permanently",
+      "Tax only corporations"
+    ],
+    "answer": 0,
+    "explanation": "AMT limits benefits of certain preferences to ensure a minimum tax."
+  },
+  {
+    "id": "REG-D-015",
+    "exam": "REG",
+    "difficulty": "Difficult",
+    "domain": "Research",
+    "question": "When authorities conflict, what should a tax professional evaluate?",
+    "options": [
+      "Hierarchy, relevance, and weight of authority",
+      "Only social media",
+      "Only client preference",
+      "Only lowest tax answer"
+    ],
+    "answer": 0,
+    "explanation": "Tax research requires evaluating the authority level, facts, relevance, and weight."
   }
 ]
