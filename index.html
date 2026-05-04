@@ -272,6 +272,49 @@
             border-color: var(--accent);
         }
 
+        /* Embedded App Section */
+        .app-section {
+            background: #fafbfc;
+        }
+
+        .app-intro {
+            background: white;
+            padding: 28px;
+            border-radius: 10px;
+            border: 1px solid #e2e8f0;
+            margin-bottom: 28px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+        }
+
+        .app-intro h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+
+        .app-intro p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            max-width: 850px;
+        }
+
+        .app-frame-wrapper {
+            width: 100%;
+            height: 900px;
+            border: 1px solid #e2e8f0;
+            border-radius: 14px;
+            overflow: hidden;
+            background: white;
+            box-shadow: 0 20px 45px rgba(0,0,0,0.10);
+        }
+
+        .app-frame {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+        }
+
         footer {
             padding: 40px 10%;
             background: var(--primary);
@@ -307,6 +350,24 @@
             .social-icons {
                 justify-content: center;
             }
+
+            .app-frame-wrapper {
+                height: 780px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .container {
+                padding: 60px 6%;
+            }
+
+            .app-frame-wrapper {
+                height: 720px;
+            }
         }
     </style>
 </head>
@@ -319,7 +380,7 @@
         <nav>
             <a href="#education">Education</a>
             <a href="#experience">Experience</a>
-            <a href="ISC-study-app/" class="btn-app">APP</a>
+            <a href="#app" class="btn-app">APP</a>
             <a href="Assets/Resume.pdf" class="btn-cv" target="_blank">Download Resume</a>
         </nav>
     </header>
@@ -423,6 +484,26 @@
                     Developed a professional personal website using HTML and JavaScript to showcase academic achievements.
                 </p>
             </div>
+        </div>
+    </section>
+
+    <section class="container app-section" id="app">
+        <span class="section-label">Interactive App</span>
+
+        <div class="app-intro">
+            <h3>ISC CPA Exam Simulator</h3>
+            <p>
+                This embedded web app provides an interactive audit-style exam practice experience,
+                including multiple-choice questions, scoring, review, and explanations.
+            </p>
+        </div>
+
+        <div class="app-frame-wrapper">
+            <iframe
+                src="ISC-study-app/"
+                title="ISC CPA Exam Simulator"
+                class="app-frame">
+            </iframe>
         </div>
     </section>
 
